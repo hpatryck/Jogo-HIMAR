@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Materiais/Imagens/imagem_menu/menu_ranking.jpeg" type="Texture" id=1]
+[ext_resource path="res://Scripts/ranking.gd" type="Script" id=2]
+
+[node name="ranking" type="Sprite"]
+position = Vector2( 200, 353.5 )
+scale = Vector2( 0.563889, 0.560156 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = -138.0
+margin_top = 235.0
+margin_right = 132.0
+margin_bottom = 308.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

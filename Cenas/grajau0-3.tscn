@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Materiais/Imagens/dica_1.jpeg" type="Texture" id=1]
+[ext_resource path="res://Materiais/Imagens/d3.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Dicas.gd" type="Script" id=3]
+
+[node name="Dica1" type="Sprite"]
+scale = Vector2( 0.555, 0.546 )
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 3 )
+
+[node name="Cazumbar" type="TextureButton" parent="."]
+margin_left = 86.0
+margin_top = 56.0
+margin_right = 361.0
+margin_bottom = 129.0
+
+[node name="Voltar" type="TextureButton" parent="."]
+margin_left = 414.0
+margin_top = 51.0
+margin_right = 689.0
+margin_bottom = 132.0
+
+[node name="D3" type="Sprite" parent="."]
+position = Vector2( 369.369, 1054.94 )
+texture = ExtResource( 2 )
+
+[connection signal="pressed" from="Cazumbar" to="." method="_on_Cazumbar_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]

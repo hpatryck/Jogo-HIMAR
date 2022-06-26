@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=1]
+[ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=2]
+[ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=3]
+[ext_resource path="res://Materiais/Imagens/imagem_menu/começa.jpg" type="Texture" id=4]
+[ext_resource path="res://Materiais/fonts/IMPACT.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://Scripts/novojogo.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 200, 354.5 )
+scale = Vector2( 0.572222, 0.555469 )
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = -147.0
+margin_top = -429.0
+margin_right = 152.0
+margin_bottom = -326.0
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = -145.049
+margin_top = -87.3136
+margin_right = 153.951
+margin_bottom = 15.6864
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
+expand = true
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = -138.0
+margin_top = 235.0
+margin_right = 145.0
+margin_bottom = 329.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = -141.553
+margin_top = -429.367
+margin_right = 141.447
+margin_bottom = -344.367
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "JOGADOR"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = -141.553
+margin_top = -83.713
+margin_right = 141.447
+margin_bottom = 1.28699
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "COMEÇAR"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -141.553
+margin_top = 234.937
+margin_right = 141.447
+margin_bottom = 319.937
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "VOLTAR"
+align = 1
+valign = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = -189.0
+margin_top = -275.0
+margin_right = 197.0
+margin_bottom = -201.0
+custom_fonts/font = SubResource( 2 )
+bookmark_gutter = true
+
+[connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="direcao" type="KinematicBody2D"]
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="shape"]
+
+[node name="centro" type="CollisionShape2D" parent="."]
+position = Vector2( 150, 250 )
+shape = SubResource( 2 )
