@@ -72,8 +72,7 @@ var op = 0
 var ep =0
 
 func _ready():
-	#tela.position= Vector2(0,0)
-	#tela.scale = Vector2(1,1)
+	
 	timer.start()
 	$Label.modulate = Color(0, 0, 0, 1)
 	$Label2.modulate = Color(0, 0, 0, 1)
