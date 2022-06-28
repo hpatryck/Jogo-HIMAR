@@ -16,10 +16,10 @@ position = Vector2( -3.00002, -134.813 )
 scale = Vector2( 0.256917, 0.17957 )
 
 [node name="cazumbar" type="TextureButton" parent="."]
-margin_left = 76.0
-margin_top = -233.0
-margin_right = 190.0
-margin_bottom = -186.0
+margin_left = 71.0
+margin_top = -322.0
+margin_right = 185.0
+margin_bottom = -275.0
 
 [node name="Label" type="Label" parent="cazumbar"]
 margin_left = 18.0
@@ -28,10 +28,10 @@ margin_right = 93.0
 margin_bottom = 25.0
 
 [node name="voltar" type="TextureButton" parent="."]
-margin_left = -165.0
-margin_top = -241.0
-margin_right = -58.0
-margin_bottom = -198.0
+margin_left = -121.0
+margin_top = -325.0
+margin_right = -11.0
+margin_bottom = -282.0
 
 [node name="Label" type="Label" parent="voltar"]
 margin_left = 26.0
@@ -41,9 +41,9 @@ margin_bottom = 40.0
 
 [node name="Label" type="Label" parent="."]
 margin_left = -81.0
-margin_top = 159.0
+margin_top = 58.0
 margin_right = 137.0
-margin_bottom = 279.0
+margin_bottom = 178.0
 autowrap = true
 clip_text = true
 

@@ -12,7 +12,9 @@ const mapa ={
 const botao ={
 	"0": [Vector2(70,150), Vector2(240,300),Vector2(170,470)],
 	"1928":[Vector2(240,170), Vector2(50,240),Vector2(200,430)],
-	"1950":[Vector2(200,100), Vector2(40,200),Vector2(230,450)]
+	"1950":[Vector2(200,100), Vector2(45,180),Vector2(230,450)],
+	"1988":[Vector2(80,200),Vector2(230,280),Vector2(40,412)],
+	"1900":[Vector2(160,125),Vector2(15,235),Vector2(158,437)]
 }
 
 const size_b = {
@@ -70,8 +72,8 @@ var op = 0
 var ep =0
 
 func _ready():
-	tela.position= Vector2(0,0)
-	tela.scale = Vector2(1,1)
+	#tela.position= Vector2(0,0)
+	#tela.scale = Vector2(1,1)
 	timer.start()
 	$Label.modulate = Color(0, 0, 0, 1)
 	$Label2.modulate = Color(0, 0, 0, 1)
@@ -105,24 +107,14 @@ func _process(delta):
 		if b1:
 			$player.move_and_collide($player.position.direction_to(d1())*3)
 			if $player.position >= d1():
-				print("direcao 1 ok")
 				out()
 		if b2:
 			$player.move_and_collide($player.position.direction_to(d2())*3)
-			#centro = false
-			print($player.position)
-			print(d2())
-			
-			print("indo para direcao 2")
-			#if $player.position >= d2()+Vector2(10,-10)  && !centro:
-			#$player.move_and_collide($player.position.direction_to(d2())*3)
 			if $player.position >= d2():
-				print("direcao 2 ok")
 				out()
 		if b3:
 			$player.move_and_collide($player.position.direction_to(d3())*3)
 			if $player.position >= d3():
-				print("direcao 3 ok")
 				out()
 
 func out():

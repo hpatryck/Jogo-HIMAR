@@ -1,6 +1,9 @@
 extends Node2D
 
 func _ready():
+	#$Label.rect_position = Vector2(-79,160)
+	$tela_fundo.position = Vector2(30,12)
+	$tela_fundo.scale = Vector2(0.8,0.8)
 	$cazumbar/Label.text = "CAZUMBAR"
 	$voltar/Label.text = "VOLTAR"
 	$cazumbar/Label.modulate = Color(0,0,0,1)
