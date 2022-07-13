@@ -3,31 +3,31 @@ extends Sprite
 onready var timer := $Timer as Timer
 
 const mapa ={
-	"0": ["res://Materiais/Imagens/mapa/imagem1.png", ],
+	"0": ["res://Materiais/Imagens/mapa/tela_grajau.jpg" ],
 	"1928": ["res://Materiais/Imagens/mapa/imagem2.png"],
 	"1950": ["res://Materiais/Imagens/mapa/imagem3.png"],
 	"1988": ["res://Materiais/Imagens/mapa/imagem4.png"],
 	"1900": ["res://Materiais/Imagens/mapa/imagem5.png"],
 	}
 const botao ={
-	"0": [Vector2(70,150), Vector2(240,300),Vector2(170,470)],
-	"1928":[Vector2(240,170), Vector2(50,240),Vector2(200,430)],
-	"1950":[Vector2(200,100), Vector2(45,180),Vector2(230,450)],
-	"1988":[Vector2(80,200),Vector2(230,280),Vector2(40,412)],
-	"1900":[Vector2(160,125),Vector2(15,235),Vector2(158,437)]
+	"0": [Vector2(200,300), Vector2(420,600),Vector2(45,800)],
+	"1928":[Vector2(470,325), Vector2(92,434),Vector2(340,780)],
+	"1950":[Vector2(440,230), Vector2(92,365),Vector2(425,820)],
+	"1988":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	"1900":[Vector2(322,176),Vector2(65,410),Vector2(290,730)]
 }
 
 const size_b = {
-	"0": [ Vector2(125,90),Vector2(100,140),Vector2(100,140)],
-	"1928": [Vector2(140,150),Vector2(140,150),Vector2(140,150)],
-	"1950" : [Vector2(130,100),Vector2(70,220),Vector2(130,100)],
-	"1988": [Vector2(110,160),Vector2(110,130),Vector2(110,130)],
-	"1900": [Vector2(110,110),Vector2(110,110),Vector2(160,90)]
+	"0": [ Vector2(190,260),Vector2(265,175),Vector2(270,190)],
+	"1928": [Vector2(188,260),Vector2(270,280),Vector2(265,210)],
+	"1950" : [Vector2(190,260),Vector2(270,280),Vector2(260,210)],
+	"1988": [Vector2(188,280),Vector2(188,260),Vector2(260,210)],
+	"1900": [Vector2(188,282),Vector2(188,260),Vector2(262,210)]
 }
 
 const telaf ={
 	"0": [ 
-	"res://Materiais/Imagens/cenario_dica/tela1d1.png",
+	"res://Materiais/Imagens/dica_1.jpeg",
 	"res://Materiais/Imagens/cenario_dica/tela1d2.png",
 	"res://Materiais/Imagens/cenario_dica/tela1d3.png"
 	],
@@ -66,20 +66,31 @@ const texto = [
 ]
 	
 onready var tela = $tela_dica/tela_fundo
-onready var pers = $tela_dica/personagem
-onready var dica = $tela_dica/Label
+onready var pers = $tela_dica/tela_fundo/personagem
+onready var dica = $tela_dica/tela_fundo/Label
 var op = 0
 var ep =0
 
 func _ready():
+	$tela_dica/tela_fundo.position = Vector2(360,625)
+	$tela_dica/tela_fundo.scale = Vector2(1,1)
 	
 	timer.start()
-	$Label.modulate = Color(0, 0, 0, 1)
-	$Label2.modulate = Color(0, 0, 0, 1)
+	$Cazumbar.rect_size= Vector2(300,90)
+	$Cazumbar.rect_position= Vector2(60,40)
+	$Cazumbar/Label.modulate = Color(0, 0, 0, 1)
+	$Cazumbar/Label.text = "Cazumbar"
+	
+	$Voltar.rect_size= Vector2(300,90)
+	$Voltar.rect_position= Vector2(400,40)
+	$Voltar/Label2.modulate = Color(0, 0, 0, 1)
+	$Voltar/Label2.text = "Voltar"
+	
+	$Label3.rect_position= Vector2(60,200)
 	$Label3.modulate = Color(0, 0, 0, 1)
-	$Label.text = "Cazumbar"
-	$Label2.text = "Voltar"
-	$tela_dica/Label.modulate = Color(0, 0, 0, 3)
+	
+	
+	$tela_dica/tela_fundo/Label.modulate = Color(0, 0, 0, 3)
 	var file = File.new()
 	file.open("res://Player.txt", File.READ)
 	$Label3.text = "Estamos em " + file.get_as_text().split(":")[1].split(";")[0]
@@ -102,6 +113,7 @@ var b3= false;
 #var centro = false
 
 func _process(delta):
+
 	if move:
 		if b1:
 			$player.move_and_collide($player.position.direction_to(d1())*3)
@@ -147,7 +159,6 @@ func _on_Dica1_pressed():
 	
 
 func _on_Dica2_pressed():
-	#centro = true
 	op = 1
 	b2 = true
 	d2()
@@ -167,7 +178,7 @@ func _on_Voltar_pressed():
 
 func _on_Timer_timeout():
 	$Timer.wait_time = 0.1
-	$tela_dica/Label.visible_characters = $tela_dica/Label.visible_characters+3
+	$tela_dica/tela_fundo/Label.visible_characters = $tela_dica/tela_fundo/Label.visible_characters+3
 	
 func _on_Button_pressed():
 	get_tree().change_scene( "res://Cenas/grajau0-2.tscn")
@@ -182,6 +193,5 @@ func desabilitar():
 func mostrar_dica():
 	$tela_dica.visible = is_visible_in_tree()
 	tela.texture = load(telaf[ep][op])
-	#pers.texture = load(personagem[op])
 	dica.text = texto[op]
 	

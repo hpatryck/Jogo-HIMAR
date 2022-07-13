@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Materiais/Videos/WhatsApp Video 2022-03-22 at 11.32.25 (video-converter.com) (1).webm" type="VideoStream" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 421.0
+margin_bottom = 709.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]

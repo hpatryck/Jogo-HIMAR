@@ -4,8 +4,8 @@
 [ext_resource path="res://Scripts/ranking.gd" type="Script" id=2]
 
 [node name="ranking" type="Sprite"]
-position = Vector2( 200, 353.5 )
-scale = Vector2( 0.563889, 0.560156 )
+position = Vector2( 180, 320 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
