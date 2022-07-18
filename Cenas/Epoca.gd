@@ -72,6 +72,7 @@ var op = 0
 var ep =0
 
 func _ready():
+	
 	$tela_dica/tela_fundo.position = Vector2(360,625)
 	$tela_dica/tela_fundo.scale = Vector2(1,1)
 	
@@ -123,6 +124,7 @@ func _process(delta):
 			$player.move_and_collide($player.position.direction_to(d2())*3)
 			if $player.position >= d2():
 				out()
+				
 		if b3:
 			$player.move_and_collide($player.position.direction_to(d3())*3)
 			if $player.position >= d3():

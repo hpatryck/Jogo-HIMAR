@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 28.6356
+radius = 13.1529
 
 [node name="direcao" type="KinematicBody2D"]
 
@@ -13,6 +13,6 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="shape"]
 
 [node name="centro" type="CollisionShape2D" parent="."]
-position = Vector2( -6, 10 )
+position = Vector2( 2, 2 )
 shape = SubResource( 2 )
 disabled = true

@@ -40,7 +40,7 @@ func write(txt):
 	file.store_string(txt)
 
 func _on_Voltar_pressed():
-	get_tree().change_scene("res://Cenas/Grajau0.tscn")
+	get_tree().change_scene("res://Cenas/Epoca.tscn")
 
 
 func _on_Opt1_pressed():
