@@ -59,13 +59,12 @@ radius = 24.0
 height = 116.0
 
 [node name="player" type="KinematicBody2D"]
-scale = Vector2( 0.5, 0.5 )
 
 [node name="anim" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "parado"
-frame = 18
+frame = 13
 playing = true
 flip_h = true
 

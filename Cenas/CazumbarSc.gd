@@ -15,12 +15,14 @@ func _ready():
 	current = file.get_as_text().split(":")[1].split(";")[0]
 	print(current)
 	var cor = Color(0, 0, 0, 1)
-	$Label.modulate = cor
-	$Label2.modulate = cor
-	$Label3.modulate = cor
-	$Label.text = (path[current][0])
-	$Label2.text = (path[current][1])
-	$Label3.text = (path[current][2])
+	$Voltar/Label.text = "Voltar"
+	$Voltar/Label.modulate = cor
+	$Opt1/Label.modulate = cor
+	$Opt2/Label2.modulate = cor
+	$Opt3/Label3.modulate = cor
+	$Opt1/Label.text = (path[current][0])
+	$Opt2/Label2.text = (path[current][1])
+	$Opt3/Label3.text = (path[current][2])
 
 
 func saveCurrent(current):
@@ -38,7 +40,7 @@ func write(txt):
 	file.store_string(txt)
 
 func _on_Voltar_pressed():
-	get_tree().change_scene("res://Cenas/Grajau0.tscn")
+	get_tree().change_scene("res://Cenas/Epoca.tscn")
 
 
 func _on_Opt1_pressed():

@@ -1,9 +1,8 @@
-extends Sprite
+extends Control
 
 func _ready():
-	pass
+	pass # Replace with function body.
 
-
-func _on_TextureButton5_pressed():
+func _on_Timer_timeout():
 	get_tree().change_scene("res://Cenas/menu.tscn"  )
 	pass # Replace with function body.

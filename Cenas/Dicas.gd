@@ -1,16 +1,17 @@
 extends Node2D
 
 func _ready():
-	#$Label.rect_position = Vector2(-79,160)
-	$tela_fundo.position = Vector2(30,12)
-	$tela_fundo.scale = Vector2(0.8,0.8)
-	$cazumbar/Label.text = "CAZUMBAR"
-	$voltar/Label.text = "VOLTAR"
-	$cazumbar/Label.modulate = Color(0,0,0,1)
-	$voltar/Label.modulate = Color(0,0,0,1)
-	$tela_fundo.position= Vector2(0,0)
-	$tela_fundo.scale= Vector2(1.2,1.2)
-
+	
+	$tela_fundo/cazumbar.rect_position = Vector2(-300,-600)
+	$tela_fundo/cazumbar/Label.modulate = Color(0,0,0,1)
+	$tela_fundo/cazumbar/Label.text = "CAZUMBAR"
+	
+	$tela_fundo/voltar.rect_position = Vector2(50,-600)
+	$tela_fundo/Label.rect_position= Vector2(-270,90)
+	$tela_fundo/voltar/Label.text = "VOLTAR"
+	
+	$tela_fundo/voltar/Label.modulate = Color(0,0,0,1)
+	
 func _on_cazumbar_pressed():
 	
 	get_tree().change_scene("res://Cenas/Cazumbar.tscn")
@@ -18,7 +19,8 @@ func _on_cazumbar_pressed():
 
 
 func _on_voltar_pressed():
-	get_tree().change_scene( "res://Cenas/Epoca.tscn" )
+	get_tree().change_scene( "res://Cenas/Epoca.tscn")
 	pass # Replace with function body.
+	
 func _process(delta):
 	pass

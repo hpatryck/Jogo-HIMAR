@@ -13,8 +13,8 @@ use_filter = true
 font_data = ExtResource( 1 )
 
 [node name="opcoes" type="Sprite"]
-position = Vector2( 201.5, 356.5 )
-scale = Vector2( 0.556944, 0.555469 )
+position = Vector2( 180, 320 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 script = ExtResource( 7 )
 

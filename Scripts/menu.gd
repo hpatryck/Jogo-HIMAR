@@ -12,8 +12,8 @@ const botao = [ "res://Materiais/Botões/botão.png",
 ]
 
 func _ready():
-	position= Vector2(200,350)
-	scale = Vector2(0.55,0.55)
+	position= Vector2(180,320)
+	scale = Vector2(0.5,0.5)
 	$botao1.rect_position = Vector2(-140,-156)
 	$botao1.rect_size = Vector2(273,104)
 	$Label.rect_position = Vector2(-140,-156)
@@ -37,9 +37,6 @@ func _ready():
 	$Label4.rect_position = Vector2(-145,283)
 	$Label4.rect_size = Vector2(296,100)
 	$Label4.text = "INSTRUÇÕES"
-	
-	#tela.texture = load(telaf[ep][op])
-	#$Label.font_data = load("res://Materiais/fonts/BRITANIC.TTF")
 	
 	pass
 	
