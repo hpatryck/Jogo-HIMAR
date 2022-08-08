@@ -1,13 +1,15 @@
 extends Sprite
 
+
+
 const path = {
-	"0": ["1928", "1950", "1988"],
-	"1928": ["1988", "1950", "1900"],
-	"1950": ["1928", "0", "1988"],
-	"1988": ["1950", "1928", "0"],
-	"1900": ["0", "0", "0"],
+	"Sao Luis": ["Imperatriz", "Grajaú", "Gurupi"],
+	"Imperatriz": ["Pindaré", "Grajaú", "Sao Luis"],
+	"Grajaú": ["Imperatriz", "Pindaré", "Gurupi"],
+	"Gurupi": ["Sao Luis", "Imperatriz", "Pindaré"],
+	"Pindaré": ["Sao Luis", "Gurupi", "Grajaú"],
 }
-var current = 0
+var current = ""
 
 func _ready():
 	var file = File.new()

@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Materiais/Imagens/Cazumbar.png" type="Texture" id=1]
+[ext_resource path="res://Materiais/Imagens/news imagens/chute.jpeg" type="Texture" id=1]
 [ext_resource path="res://Cenas/CazumbarSc.gd" type="Script" id=2]
 [ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=3]
 [ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=4]
@@ -23,21 +23,18 @@ font_data = ExtResource( 6 )
 size = 35
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 35
-font_data = ExtResource( 6 )
-
 [node name="Cazumbar" type="Sprite"]
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 1, 10 )
+scale = Vector2( 0.506944, 0.502344 )
 texture = ExtResource( 1 )
 centered = false
 script = ExtResource( 2 )
 
 [node name="Voltar" type="TextureButton" parent="."]
-margin_left = 24.0
-margin_top = 10.0
-margin_right = 274.0
-margin_bottom = 115.0
+margin_left = 153.863
+margin_top = 193.095
+margin_right = 493.863
+margin_bottom = 298.095
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
@@ -45,56 +42,56 @@ expand = true
 
 [node name="Label" type="Label" parent="Voltar"]
 margin_top = 14.0
-margin_right = 244.0
+margin_right = 314.0
 margin_bottom = 84.0
 custom_fonts/font = SubResource( 5 )
 align = 1
 valign = 1
 
 [node name="Opt1" type="TextureButton" parent="."]
-margin_left = 90.0
-margin_top = 250.0
-margin_right = 354.0
-margin_bottom = 331.0
+margin_left = 166.0
+margin_top = 729.0
+margin_right = 513.0
+margin_bottom = 825.0
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
 expand = true
 
 [node name="Label" type="Label" parent="Opt1"]
-margin_left = 2.0
-margin_top = 4.0
-margin_right = 246.0
-margin_bottom = 62.0
+margin_left = 9.0
+margin_top = 18.0
+margin_right = 314.0
+margin_bottom = 70.0
 custom_fonts/font = SubResource( 1 )
 text = "Arroz"
 align = 1
 valign = 1
 
 [node name="Opt2" type="TextureButton" parent="."]
-margin_left = 90.0
-margin_top = 390.0
-margin_right = 356.0
-margin_bottom = 482.0
+margin_left = 163.726
+margin_top = 433.966
+margin_right = 512.726
+margin_bottom = 531.966
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
 expand = true
 
 [node name="Label2" type="Label" parent="Opt2"]
-margin_left = 4.0
-margin_top = 8.0
-margin_right = 252.0
-margin_bottom = 68.0
+margin_left = 19.726
+margin_top = 3.98126
+margin_right = 352.726
+margin_bottom = 87.9813
 custom_fonts/font = SubResource( 2 )
 align = 1
 valign = 1
 
 [node name="Opt3" type="TextureButton" parent="."]
-margin_left = 90.0
-margin_top = 516.0
-margin_right = 360.0
-margin_bottom = 604.0
+margin_left = 156.0
+margin_top = 569.0
+margin_right = 515.0
+margin_bottom = 677.0
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
@@ -103,28 +100,19 @@ expand = true
 [node name="Label3" type="Label" parent="Opt3"]
 margin_left = 2.0
 margin_top = 10.0
-margin_right = 252.0
-margin_bottom = 68.0
+margin_right = 351.0
+margin_bottom = 86.0
 custom_fonts/font = SubResource( 3 )
 align = 1
 valign = 1
 
-[node name="Opt4" type="TextureButton" parent="."]
-margin_left = 90.0
-margin_top = 648.0
-margin_right = 360.0
-margin_bottom = 739.0
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
-
-[node name="Label4" type="Label" parent="Opt4"]
-margin_left = 6.0
-margin_top = 10.0
-margin_right = 256.0
-margin_bottom = 64.0
-custom_fonts/font = SubResource( 4 )
+[node name="estamos_em" type="Label" parent="."]
+margin_left = 160.0
+margin_top = 303.0
+margin_right = 576.0
+margin_bottom = 412.0
+custom_fonts/font = SubResource( 5 )
+text = "estamos em"
 align = 1
 valign = 1
 
@@ -132,4 +120,3 @@ valign = 1
 [connection signal="pressed" from="Opt1" to="." method="_on_Opt1_pressed"]
 [connection signal="pressed" from="Opt2" to="." method="_on_Opt2_pressed"]
 [connection signal="pressed" from="Opt3" to="." method="_on_Opt3_pressed"]
-[connection signal="pressed" from="Opt4" to="." method="_on_Opt4_pressed"]

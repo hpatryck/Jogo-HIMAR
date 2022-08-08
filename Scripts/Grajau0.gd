@@ -3,7 +3,7 @@ extends Node2D
 func _ready():
 	var file = File.new()
 	file.open("res://player.txt", File.WRITE)
-	file.store_string("player1:0;0")
+	file.store_string("player1:Sao Luis;0")
 
 func _on_Pista1_pressed():
 	get_tree().change_scene("res://Cenas/grajau0-1.tscn")

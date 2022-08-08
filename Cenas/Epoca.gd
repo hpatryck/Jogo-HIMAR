@@ -3,50 +3,50 @@ extends Sprite
 onready var timer := $Timer as Timer
 
 const mapa ={
-	"0": ["res://Materiais/Imagens/mapa/tela_grajau.jpg" ],
-	"1928": ["res://Materiais/Imagens/mapa/imagem2.png"],
-	"1950": ["res://Materiais/Imagens/mapa/imagem3.png"],
-	"1988": ["res://Materiais/Imagens/mapa/imagem4.png"],
-	"1900": ["res://Materiais/Imagens/mapa/imagem5.png"],
+	"Sao Luis": ["res://Materiais/Imagens/news imagens/mapa_sao_luis.jpeg"],
+	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa_imperatriz.jpeg" ],
+	"Grajaú": ["res://Materiais/Imagens/news imagens/mapa_grajau.jpg"],
+	"Gurupi": ["res://Materiais/Imagens/mapa/imagem4.png"],
+	"Pindaré": ["res://Materiais/Imagens/mapa/imagem5.png"],
 	}
-const botao ={
-	"0": [Vector2(200,300), Vector2(420,600),Vector2(45,800)],
-	"1928":[Vector2(470,325), Vector2(92,434),Vector2(340,780)],
-	"1950":[Vector2(440,230), Vector2(92,365),Vector2(425,820)],
-	"1988":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
-	"1900":[Vector2(322,176),Vector2(65,410),Vector2(290,730)]
+const posicao ={
+	"Sao Luis": [Vector2(400,250), Vector2(120,750),Vector2(450,680)],
+	"Imperatriz":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
+	"Grajaú":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	"Pindaré":[Vector2(322,176),Vector2(65,410),Vector2(290,730)]
 }
 
 const size_b = {
-	"0": [ Vector2(190,260),Vector2(265,175),Vector2(270,190)],
-	"1928": [Vector2(188,260),Vector2(270,280),Vector2(265,210)],
-	"1950" : [Vector2(190,260),Vector2(270,280),Vector2(260,210)],
-	"1988": [Vector2(188,280),Vector2(188,260),Vector2(260,210)],
-	"1900": [Vector2(188,282),Vector2(188,260),Vector2(262,210)]
+	"Sao Luis": [ Vector2(190,260),Vector2(265,175),Vector2(270,190)],
+	"Imperatriz": [Vector2(188,280),Vector2(260,200),Vector2(310,210)],
+	"Grajaú" : [Vector2(190,280),Vector2(290,200),Vector2(300,210)],
+	"Gurupi": [Vector2(188,280),Vector2(188,260),Vector2(260,210)],
+	"Pindaré": [Vector2(188,282),Vector2(188,260),Vector2(262,210)]
 }
 
 const telaf ={
-	"0": [ 
-	"res://Materiais/Imagens/dica_1.jpeg",
-	"res://Materiais/Imagens/cenario_dica/tela1d2.png",
-	"res://Materiais/Imagens/cenario_dica/tela1d3.png"
+	"Sao Luis": [ 
+	"res://Materiais/Imagens/news imagens/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/dica3_saoLuis.jpeg"
 	],
-	"1928": [
+	"Imperatriz": [
 		"res://Materiais/Imagens/cenario_dica/tela2d1.png",
 	"res://Materiais/Imagens/cenario_dica/tela2d2.png",
 	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
 	],
-	"1950": [
-		"res://Materiais/Imagens/cenario_dica/tela3d1.png",
-		"res://Materiais/Imagens/cenario_dica/tela3d2.png",
-		"res://Materiais/Imagens/cenario_dica/tela3d3.png"
+	"Grajaú": [
+		"res://Materiais/Imagens/news imagens/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/dica3_grajau.jpeg"
 	],
-	"1988": [
+	"Gurupi": [
 		"res://Materiais/Imagens/cenario_dica/tela5d1.png",
 		"res://Materiais/Imagens/cenario_dica/tela5d2.png",
 		"res://Materiais/Imagens/cenario_dica/tela5d3.png"
 	],
-	"1900": [
+	"Pindaré": [
 		"res://Materiais/Imagens/cenario_dica/tela4d1.png",
 		"res://Materiais/Imagens/cenario_dica/tela4d2.png",
 		"res://Materiais/Imagens/cenario_dica/tela4d3.png"
@@ -59,17 +59,72 @@ const personagem = [
 	"res://Materiais/imagens teste/personagem3.jpeg"
 ]
 
-const texto = [
-	"primeira dica do primeiro ponto primeira dica do primeiro ponto primeira dica do primeiro ponto ",
-	"segunda dica do segundo ponto segunda dica do segundo ponto segunda dica do segundo ponto ",
-	"terceira dica do terceiro ponto terceira dica do terceiro ponto terceira dica do terceiro ponto"
-]
+const texto ={
+	"Sao Luis": [ 
+		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a populaçâo cam a criação da estrada Belém_Breasília.",
+		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
+		"O quê? suspeito? Suspeito de quê? Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a decada de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
+	],
+	"Imperatriz": [
+		"res://Materiais/Imagens/cenario_dica/tela2d1.png",
+	"res://Materiais/Imagens/cenario_dica/tela2d2.png",
+	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
+	],
+	"Grajaú": [
+		"oh meu filho/a! Não passou nenhum suspeito por aqui. \n\n\n\n Vá em paz!",
+	" 'Mirmã' nao sei nada não! Passou um suspeito por aqui, mas dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no certão do maranhao. Que parece, aconteceu no final do seculo XIX e no inicio do século XX."  ,
+	"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independencia política do sertão do maranhão. "
+	],
+	"Gurupi": [
+		"res://Materiais/Imagens/cenario_dica/tela5d1.png",
+		"res://Materiais/Imagens/cenario_dica/tela5d2.png",
+		"res://Materiais/Imagens/cenario_dica/tela5d3.png"
+	],
+	"Pindaré": [
+		"res://Materiais/Imagens/cenario_dica/tela4d1.png",
+		"res://Materiais/Imagens/cenario_dica/tela4d2.png",
+		"res://Materiais/Imagens/cenario_dica/tela4d3.png"
+	]
+}
+
+
+const img_f ={
+	"Sao Luis": [ 
+	"res://Materiais/Imagens/news imagens/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/d3_saoluis.jpeg"
+	],
+	"Imperatriz": [
+		"res://Materiais/Imagens/cenario_dica/tela2d1.png",
+	"res://Materiais/Imagens/cenario_dica/tela2d2.png",
+	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
+	],
+	"Grajaú": [
+		"res://Materiais/Imagens/news imagens/d1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/d2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/d3_grajau.jpeg"
+	],
+	"Gurupi": [
+		"res://Materiais/Imagens/cenario_dica/tela5d1.png",
+		"res://Materiais/Imagens/cenario_dica/tela5d2.png",
+		"res://Materiais/Imagens/cenario_dica/tela5d3.png"
+	],
+	"Pindaré": [
+		"res://Materiais/Imagens/cenario_dica/tela4d1.png",
+		"res://Materiais/Imagens/cenario_dica/tela4d2.png",
+		"res://Materiais/Imagens/cenario_dica/tela4d3.png"
+	]
+}
+
+
+
 	
 onready var tela = $tela_dica/tela_fundo
 onready var pers = $tela_dica/tela_fundo/personagem
 onready var dica = $tela_dica/tela_fundo/Label
 var op = 0
-var ep =0
+var ep =""
+var cont = false
 
 func _ready():
 	
@@ -97,9 +152,9 @@ func _ready():
 	$Label3.text = "Estamos em " + file.get_as_text().split(":")[1].split(";")[0]
 	ep =file.get_as_text().split(":")[1].split(";")[0]
 	texture = load(mapa[ep][0])
-	$Dica1.rect_position = botao[ep][0]
-	$Dica2.rect_position = botao[ep][1]
-	$Dica3.rect_position = botao[ep][2]
+	$Dica1.rect_position = posicao[ep][0]
+	$Dica2.rect_position = posicao[ep][1]
+	$Dica3.rect_position = posicao[ep][2]
 	
 	$Dica1.rect_size = size_b[ep][0]
 	$Dica2.rect_size = size_b[ep][1]
@@ -136,17 +191,17 @@ func out():
 	$player.visible = false
 
 func d1():
-	$direcao/shape.position = botao[ep][op]
+	$direcao/shape.position = posicao[ep][op]
 	
-	return botao[ep][op]+Vector2(0,60)
+	return posicao[ep][op]+Vector2(0,60)
 
 func d2():
-	$direcao/shape.position = botao[ep][op]
-	return botao[ep][op]+Vector2(0,60)
+	$direcao/shape.position = posicao[ep][op]
+	return posicao[ep][op]+Vector2(0,60)
 
 func d3():
-	$direcao/shape.position = botao[ep][op]
-	return botao[ep][op]+Vector2(0,60)
+	$direcao/shape.position = posicao[ep][op]
+	return posicao[ep][op]+Vector2(0,60)
 
 func movimentacao():
 	move = true
@@ -191,9 +246,23 @@ func desabilitar():
 	$Dica3.disabled = true
 	$Cazumbar.disabled = true
 	$Voltar.disabled = true
+	$contnuacao.visible = true
 	
 func mostrar_dica():
 	$tela_dica.visible = is_visible_in_tree()
-	tela.texture = load(telaf[ep][op])
-	dica.text = texto[op]
+	if cont == false:
+		tela.texture = load(telaf[ep][op])
+		dica.text = texto[ep][op]
 	
+
+
+func _on_contnuacao_pressed():
+	tela.texture = load(img_f[ep][op])
+	dica.text = texto[ep][op]
+	#if $tela_dica/tela_fundo/Label.visible_characters >50:
+	$tela_dica/tela_fundo/Label.lines_skipped = 6
+	#timer.start()
+	#_on_Timer_timeout()
+	
+	cont = true
+	pass # Replace with function body.
