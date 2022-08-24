@@ -9,28 +9,25 @@ func _ready():
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()
-	
 	db.query("update infojogador set status = '0';")
-	
+	#COMMIT AQUI
 	
 	
 func _insertDB():
-	var name = $TextEdit.get_text()
+	var name = $TextEdit.get_text().strip_edges()
 	print(name)
 	if name == "":
 		return false
-	
-	db.query("select * from infojogador where nome = '", name, "';")
+	db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 	var player = db.query_result
-	print(player)
 	if len(player) == 0:
-		db.query("insert into infojogador (nome, score) values ('", name, "', '0');" )
-		db.query("select * from infojogador where nome = '", name, "';")
+		db.insert_rows("infojogador", {'nome':name})
+		#COMMIT AQUI
+		db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 		player = db.query_result
-		
 	print(player)
-	db.query("update infojogador set status = '1' where id = '", player[0]["id"], "';")
-	
+	db.query_with_bindings("update infojogador set status = '1' where id = '?';", [player[0]["id"]])
+	#COMMIT AQUI
 	return true
 	
 	
