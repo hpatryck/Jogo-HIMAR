@@ -1,9 +1,22 @@
 extends Node2D
 
+const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
+var db
+var db_name = "res://SQLite/database.db"
+
 func _ready():
-	var file = File.new()
-	file.open("res://player.txt", File.WRITE)
-	file.store_string("player1:Sao Luis;0")
+	db = SQLite.new()
+	db.path = db_name
+	db.open_db()
+
+func moveu(cenaout, cenain):
+	db.query_with_bindings("select * from infojogador where status = '1';")
+	var player = db.query_result
+	db.query_with_bindings("select pont from pontuacao where cenaout = ? and cenain = ?;", [cenaout, cenain])
+	var incremento = db.query_result
+	db.query_with_bindings("""update infojogador set score = ? where
+	 	id = ?;""", [player[0].score+incremento[0].pont, player[0].id])
+	db.close()
 
 func _on_Pista1_pressed():
 	get_tree().change_scene("res://Cenas/grajau0-1.tscn")

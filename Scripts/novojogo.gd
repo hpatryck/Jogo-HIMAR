@@ -18,14 +18,12 @@ func _insertDB():
 		return false
 	db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 	var player = db.query_result
-	
 	if len(player) == 0:
 		db.query_with_bindings("insert into infojogador (nome) values (?);", [name])
 		db.close_db()
 		db.open_db()
 		db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 		player = db.query_result
-	
 	db.query_with_bindings("update infojogador set status = '1' where id = ?;", [player[0]["id"]])
 	
 	db.close_db()
