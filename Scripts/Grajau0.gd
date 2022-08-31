@@ -9,6 +9,7 @@ func _ready():
 	db.path = db_name
 	db.open_db()
 
+#Colocar nas cenas para modificar a pontuação
 func moveu(cenaout, cenain):
 	db.query_with_bindings("select * from infojogador where status = '1';")
 	var player = db.query_result
