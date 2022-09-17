@@ -2,55 +2,134 @@ extends Sprite
 
 onready var timer := $Timer as Timer
 
+
 const mapa ={
-	"Sao Luis": ["res://Materiais/Imagens/news imagens/mapa_sao_luis.jpeg"],
-	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa_imperatriz.jpeg" ],
-	"Grajaú": ["res://Materiais/Imagens/news imagens/mapa_grajau.jpg"],
-	"Gurupi": ["res://Materiais/Imagens/mapa/imagem4.png"],
-	"Pindaré": ["res://Materiais/Imagens/mapa/imagem5.png"],
+	"Sao Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
+	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa/mapa_imperatriz.jpeg" ],
+	"Grajaú": ["res://Materiais/Imagens/news imagens/mapa/mapa_grajau.jpg"],
+	"Gurupi": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg"],
+	"Pindaré": ["res://Materiais/Imagens/news imagens/mapa/telaPindare2.jpg"  ],
+	#///////////////////////Novas Cidades //////////////////////////////#
+	"Alcântara": ["res://Materiais/Imagens/news imagens/mapa/telaAlcântarap.jpg"],
+	"Guimarães": ["res://Materiais/Imagens/news imagens/mapa/telaAlcântarap.jpg" ],
+	"Buriticupu": [ "res://Materiais/Imagens/news imagens/mapa/buriticupuP.jpg" ],
+	"Caxias": ["res://Materiais/Imagens/news imagens/mapa/telaMapaCaxiasMa2.jpg"  ],
+	
+	"Carolina": ["res://Materiais/Imagens/news imagens/mapa/telaViana.jpg" ],
+	"Barrerinhas": ["res://Materiais/Imagens/news imagens/mapa/telaBarerinhas.jpg" ],
+	"Codó": ["res://Materiais/Imagens/news imagens/mapa/codo.jpg"   ],
+	"Santa Inês": [ "res://Materiais/Imagens/news imagens/mapa/santaines.jpg"   ],
+	"Viana": ["res://Materiais/Imagens/news imagens/mapa/telaViana.jpg"  ],
+	
 	}
+
+
 const posicao ={
-	"Sao Luis": [Vector2(400,250), Vector2(120,750),Vector2(450,680)],
-	"Imperatriz":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
-	"Grajaú":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Sao Luis": [Vector2(200,250), Vector2(240,555),Vector2(460,660)],
+	"Imperatriz":[Vector2(320,200), Vector2(110,440),Vector2(420,600)],
+	"Grajaú":[Vector2(175,320), Vector2(400,575),Vector2(30,780)],
 	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
-	"Pindaré":[Vector2(322,176),Vector2(65,410),Vector2(290,730)]
+	"Pindaré":[Vector2(400,340),Vector2(130,430),Vector2(90,610)],
+	"Alcântara": [Vector2(418,318), Vector2(130,455),Vector2(50,750)],
+	"Guimarães":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
+	"Buriticupu":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Caxias":[Vector2(360,410),Vector2(415,570),Vector2(50,570)],   #////////////#
+	"Carolina":[Vector2(322,176),Vector2(65,410),Vector2(290,730)],
+	"Barrerinhas": [Vector2(400,250), Vector2(120,750),Vector2(450,680)],
+	"Codó":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
+	"Santa Inês":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Viana":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
 }
 
 const size_b = {
-	"Sao Luis": [ Vector2(190,260),Vector2(265,175),Vector2(270,190)],
-	"Imperatriz": [Vector2(188,280),Vector2(260,200),Vector2(310,210)],
-	"Grajaú" : [Vector2(190,280),Vector2(290,200),Vector2(300,210)],
-	"Gurupi": [Vector2(188,280),Vector2(188,260),Vector2(260,210)],
-	"Pindaré": [Vector2(188,282),Vector2(188,260),Vector2(262,210)]
+	"Sao Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
+	"Imperatriz":[Vector2(250,240), Vector2(300,180),Vector2(230,200)],
+	"Grajaú":[Vector2(250,240), Vector2(400,600),Vector2(300,200)],
+	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	"Pindaré":[Vector2(170,145),Vector2(180,110),Vector2(220,110)],
+	"Alcântara": [Vector2(145,118), Vector2(310,90),Vector2(190,115)],
+	"Guimarães":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
+	"Buriticupu":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Caxias":[Vector2(210,120),Vector2(200,150),Vector2(190,150)], #//////////////#
+	"Carolina":[Vector2(322,176),Vector2(65,410),Vector2(290,730)],
+	"Barrerinhas": [Vector2(400,250), Vector2(120,750),Vector2(450,680)],
+	"Codó":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
+	"Santa Inês":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Viana":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	
 }
-
 const telaf ={
 	"Sao Luis": [ 
-	"res://Materiais/Imagens/news imagens/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/dica3_saoLuis.jpeg"
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Imperatriz": [
-		"res://Materiais/Imagens/cenario_dica/tela2d1.png",
-	"res://Materiais/Imagens/cenario_dica/tela2d2.png",
-	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Grajaú": [
-		"res://Materiais/Imagens/news imagens/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/dica3_grajau.jpeg"
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
 	],
 	"Gurupi": [
-		"res://Materiais/Imagens/cenario_dica/tela5d1.png",
-		"res://Materiais/Imagens/cenario_dica/tela5d2.png",
-		"res://Materiais/Imagens/cenario_dica/tela5d3.png"
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Pindaré": [
-		"res://Materiais/Imagens/cenario_dica/tela4d1.png",
-		"res://Materiais/Imagens/cenario_dica/tela4d2.png",
-		"res://Materiais/Imagens/cenario_dica/tela4d3.png"
-	]
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
+	],
+	"Alcântara": [ 
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
+	],
+	"Guimarães": [
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
+	],
+	"Buriticupu": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
+	],
+	"Caxias": [
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
+	],
+	"Carolina": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
+	],
+	"Barrerinhas": [ 
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
+	],
+	"Codó": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
+	],
+	"Santa Inês": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
+	],
+	"Viana": [
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
+	],
+	
 }
 
 const personagem = [
@@ -62,63 +141,153 @@ const personagem = [
 const texto ={
 	"Sao Luis": [ 
 		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a populaçâo cam a criação da estrada Belém_Breasília.",
-		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
-		"O quê? suspeito? Suspeito de quê? Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a decada de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
+		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada.\n Eu não entendi foi nada.",
+		"O quê? suspeito?\n Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a decada de 1980, vivia o ciclo do arroz.Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
 	],
 	"Imperatriz": [
-		"res://Materiais/Imagens/cenario_dica/tela2d1.png",
+		
+		" Ho meu filho/a! \n Passou um suspeito por aqui sim!\n Ele falava alguma coisa sem sentido. Queria saber sobrre um atentado contra um tal de Leão Leda.",
+		"'Mirmã' nao sei nada não! Passou um suspeito por aqui, mas dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no certão do maranhao. Que parece, aconteceu no final do seculo XIX e no inicio do século XX."  ,
+		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independencia política do sertão do maranhão. "
+	],
+	"Grajaú": [
+		"Uma pessoa estranha passou por aqui dizendo que ia atrás da primeira cidade com iluminação elétrica...\n\n Mas por que ? Se na nossa cidade já tem!",
+		"Sim, passou sim. Ele falou que ia atrás de açúcar e rapadura em um engenho. Até falei que tinha um comércio aqui perto...\n mas ele me ignorou.",
+		"Um suspeito passou dizendo que ia pegar um trem que passasse no terminal dos canaviais... \n\n Eu achei ele meio estranho."
+		
+	],
+	"Gurupi": [
+		"Acho que não vi nenhum suspeito por aqui.",
+		"não vi nada de estranho por aqui.",
+		"nenhuma pessoas suspeita passou por aqui"
+	],
+	"Pindaré": [
+		"Sim, uma pessoa estranha veio me perguntar onde ficava a cidade da umbanda ",
+		"Pequeno, um suspeito disse que estava indo atras de um piá chamado Wilson Nonato, ele tambem disse que os pais dele o chama de Bita.",
+		"Eu ouvi uma pessoa dizendo para um piá que estava indo para o leste do estado atras de uma fabrica de algodão"
+	],
+	"Alcântara": [ 
+	"res://Materiais/Imagens/news imagens/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/dica3_saoLuis.jpeg"
+	],
+	"Guimarães": [
+	"sinto muito nao poder lhe ajudar \n não avistei nada de estranho por aqui",
+	"não, não, \n estar tudo em paz por aqui!",
+	"não vi nada de estraho por aqui"
+	],
+	"Buriticupu": [
+		"Suspeito? \n Não vi nenhum aqui não.",
+		"não tem nada de estranho por aqui",
+		"Não passou nenhum suspeito por aqui"
+	],
+	"Caxias": [
+		"nao vi nada de estranho por aqui ",
+	"nao posso lhe ajuda, nao sei de nada"  ,
+	"desculpa, mas nao v nenhum suspeito por aqui"
+	],
+	"Carolina": [
+		"Não passou nenhum suspeito por aqui",
+		"Não avistei nenhum suspeito. ",
+		"por aqui nao passou niguem estranho"
+	],
+	"Barrerinhas": [ 
+	"um suspeito passou dizendo que ía participar do debate contra os higiênitas para nao demolirem a cidade, nao entendi foi nada.",
+	"Acho que sim,\n uma pessoa estranha disse que estava indo para uma cidade onde os edificios estava entrando em ruina e as pessoas estavam indo embora de lá"  ,
+	"Um suspeito disse que estava a caminho da cidade que foi a maior industria do estado, \n mas ela esta decaindo aos poucos depois da eboliçao da escravatura"
+	],
+	"Codó": [
+	"res://Materiais/Imagens/cenario_dica/tela2d1.png",
 	"res://Materiais/Imagens/cenario_dica/tela2d2.png",
 	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
 	],
-	"Grajaú": [
-		"oh meu filho/a! Não passou nenhum suspeito por aqui. \n\n\n\n Vá em paz!",
-	" 'Mirmã' nao sei nada não! Passou um suspeito por aqui, mas dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no certão do maranhao. Que parece, aconteceu no final do seculo XIX e no inicio do século XX."  ,
-	"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independencia política do sertão do maranhão. "
+	"Santa Inês": [
+		"nã, nenhum suspeito passou por aqui",
+		"oh querido/a, sinto muito \n mas nao posso lhe ajudar,",
+		"Suspeito? \n nããão siô, por aqui esta tudo na santa paz."
 	],
-	"Gurupi": [
-		"res://Materiais/Imagens/cenario_dica/tela5d1.png",
-		"res://Materiais/Imagens/cenario_dica/tela5d2.png",
-		"res://Materiais/Imagens/cenario_dica/tela5d3.png"
+	"Viana": [
+		"não passou ninguem estranho",
+	"nao vi ninguem suspeito por aqui"  ,
+	"não vi nada de estranho por aqui"
 	],
-	"Pindaré": [
-		"res://Materiais/Imagens/cenario_dica/tela4d1.png",
-		"res://Materiais/Imagens/cenario_dica/tela4d2.png",
-		"res://Materiais/Imagens/cenario_dica/tela4d3.png"
-	]
 }
-
 
 const img_f ={
 	"Sao Luis": [ 
-	"res://Materiais/Imagens/news imagens/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/d3_saoluis.jpeg"
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
 	],
 	"Imperatriz": [
-		"res://Materiais/Imagens/cenario_dica/tela2d1.png",
-	"res://Materiais/Imagens/cenario_dica/tela2d2.png",
-	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
 	],
 	"Grajaú": [
-		"res://Materiais/Imagens/news imagens/d1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/d2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/d3_grajau.jpeg"
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
 	],
 	"Gurupi": [
-		"res://Materiais/Imagens/cenario_dica/tela5d1.png",
-		"res://Materiais/Imagens/cenario_dica/tela5d2.png",
-		"res://Materiais/Imagens/cenario_dica/tela5d3.png"
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
 	],
 	"Pindaré": [
-		"res://Materiais/Imagens/cenario_dica/tela4d1.png",
-		"res://Materiais/Imagens/cenario_dica/tela4d2.png",
-		"res://Materiais/Imagens/cenario_dica/tela4d3.png"
-	]
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+	],
+	
+		"Alcântara": [ 
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
+	],
+	"Guimarães": [
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
+	],
+	"Buriticupu": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+	],
+	"Caxias": [
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
+	],
+	"Carolina": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+	],
+	"Barrerinhas": [ 
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
+	],
+	"Codó": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+	],
+	"Santa Inês": [
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+	],
+	"Viana": [
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
+	],
+	
 }
 
-
-
-	
 onready var tela = $tela_dica/tela_fundo
 onready var pers = $tela_dica/tela_fundo/personagem
 onready var dica = $tela_dica/tela_fundo/Label

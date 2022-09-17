@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="-jogo-humar"
-run/main_scene="res://Cenas/menu.tscn"
+run/main_scene="res://Cenas/primeiro_video.tscn"
 config/icon="res://icon.png"
 
 [display]

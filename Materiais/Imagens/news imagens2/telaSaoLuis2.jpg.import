@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/telaSaoLuis2.jpg-f08aa814aa967ea1ef8b347a2ede1afe.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Materiais/Imagens/news imagens2/telaSaoLuis2.jpg"
+dest_files=[ "res://.import/telaSaoLuis2.jpg-f08aa814aa967ea1ef8b347a2ede1afe.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

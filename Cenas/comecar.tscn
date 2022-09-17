@@ -4,7 +4,7 @@
 [ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=2]
 [ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=3]
 [ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=4]
-[ext_resource path="res://Materiais/Imagens/imagem_menu/começa.jpg" type="Texture" id=6]
+[ext_resource path="res://Materiais/Imagens/news imagens/menu/começa.jpg" type="Texture" id=5]
 [ext_resource path="res://Scripts/comecar.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
@@ -15,7 +15,7 @@ font_data = ExtResource( 1 )
 [node name="Sprite" type="Sprite"]
 position = Vector2( 180, 320 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 script = ExtResource( 7 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
