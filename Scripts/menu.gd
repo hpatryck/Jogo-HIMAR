@@ -12,6 +12,7 @@ const botao = [ "res://Materiais/Botões/botão.png",
 ]
 
 func _ready():
+	$AudioStreamPlayer2D.play()
 	position= Vector2(180,320)
 	scale = Vector2(0.5,0.5)
 	$botao1.rect_position = Vector2(-140,-156)

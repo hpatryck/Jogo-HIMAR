@@ -1,6 +1,7 @@
 extends Sprite
 
 func _ready():
+	$AudioStreamPlayer2D.play(3)
 	pass
 
 

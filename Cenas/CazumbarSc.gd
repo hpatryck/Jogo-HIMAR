@@ -2,25 +2,26 @@ extends Sprite
 
 
 const path = {
-	"Sao Luis": ["Imperatriz", "Guimarães", "Gurupi"],
-	"Imperatriz": ["Viana", "Grajaú", "Sao Luis"],
+	"São Luis": ["Imperatriz", "Guimarães", "Gurupi"],
+	"Imperatriz": ["Viana", "Grajaú", "São Luis"],
 	"Grajaú": ["Imperatriz", "Pindaré", "Carolina"],
 	"Gurupi": ["Caxias", "Carolina", "Buriticupu"],
-	"Pindaré": ["Sao Luis", "Gurupi", "Codó"],
+	"Pindaré": ["São Luis", "Gurupi", "Codó"],
 	"Alcântara": ["Santa Inês", "Viana", "Codó"],
-	"Guimarães": ["Caxias", "Santa Inês", "Sao Luis"],
+	"Guimarães": ["Caxias", "Santa Inês", "São Luis"],
 	"Buriticupu": ["Imperatriz", "Carolina", "Gurupi"],
-	"Caxias": ["Sao Luis", "Imperatriz", "Santa Inês"],
-	"Carolina": ["Sao Luis", "Viana", "Santa Inês"],
+	"Caxias": ["São Luis", "Imperatriz", "Santa Inês"],
+	"Carolina": ["São Luis", "Viana", "Santa Inês"],
 	"Barrerinhas": ["Alcântara", "Viana", "Caxias"],
 	"Codó": ["Guimarães", "Buriticupu", "Barrerinhas"],
 	"Santa Inês": ["Imperatriz", "Guimarães", "Gurupi"],
-	"Viana": ["Sao Luis", "Imperatriz", "Caxias"],
+	"Viana": ["São Luis", "Imperatriz", "Caxias"],
 	
 }
 var current = ""
 
 func _ready():
+	$AudioStreamPlayer2D.play(2)
 	var file = File.new()
 	file.open("res://player.txt", File.READ)
 	current = file.get_as_text().split(":")[1].split(";")[0]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Materiais/fonts/IMPACT.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=2]
 [ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=3]
 [ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=4]
 [ext_resource path="res://Materiais/Imagens/news imagens/menu/começa.jpg" type="Texture" id=5]
+[ext_resource path="res://Materiais/Sons/MusicaMenuPrincipal.mp3" type="AudioStream" id=6]
 [ext_resource path="res://Scripts/comecar.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
@@ -80,6 +81,9 @@ custom_fonts/font = SubResource( 1 )
 text = "VOLTAR"
 align = 1
 valign = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]

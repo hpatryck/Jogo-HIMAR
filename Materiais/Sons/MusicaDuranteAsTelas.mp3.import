@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MusicaDuranteAsTelas.mp3-190f70a3c3bfcbd0f80ff527f8247950.mp3str"
+
+[deps]
+
+source_file="res://Materiais/Sons/MusicaDuranteAsTelas.mp3"
+dest_files=[ "res://.import/MusicaDuranteAsTelas.mp3-190f70a3c3bfcbd0f80ff527f8247950.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -5,6 +5,7 @@ var db
 var db_name = "res://SQLite/database.db"
 
 func _ready():
+	$AudioStreamPlayer2D.play(2)
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()

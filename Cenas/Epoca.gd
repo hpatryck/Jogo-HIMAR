@@ -4,7 +4,7 @@ onready var timer := $Timer as Timer
 
 
 const mapa ={
-	"Sao Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
+	"São Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
 	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa/mapa_imperatriz.jpeg" ],
 	"Grajaú": ["res://Materiais/Imagens/news imagens/mapa/mapa_grajau.jpg"],
 	"Gurupi": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg"],
@@ -25,7 +25,7 @@ const mapa ={
 
 
 const posicao ={
-	"Sao Luis": [Vector2(200,250), Vector2(240,555),Vector2(460,660)],
+	"São Luis": [Vector2(200,250), Vector2(240,555),Vector2(460,660)],
 	"Imperatriz":[Vector2(320,200), Vector2(110,440),Vector2(420,600)],
 	"Grajaú":[Vector2(175,320), Vector2(400,575),Vector2(30,780)],
 	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
@@ -42,7 +42,7 @@ const posicao ={
 }
 
 const size_b = {
-	"Sao Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
+	"São Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
 	"Imperatriz":[Vector2(250,240), Vector2(300,180),Vector2(230,200)],
 	"Grajaú":[Vector2(250,240), Vector2(400,600),Vector2(300,200)],
 	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
@@ -59,7 +59,7 @@ const size_b = {
 	
 }
 const telaf ={
-	"Sao Luis": [ 
+	"São Luis": [ 
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
@@ -139,7 +139,7 @@ const personagem = [
 ]
 
 const texto ={
-	"Sao Luis": [ 
+	"São Luis": [ 
 		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a populaçâo cam a criação da estrada Belém_Breasília.",
 		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada.\n Eu não entendi foi nada.",
 		"O quê? suspeito?\n Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a decada de 1980, vivia o ciclo do arroz.Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
@@ -214,7 +214,7 @@ const texto ={
 }
 
 const img_f ={
-	"Sao Luis": [ 
+	"São Luis": [ 
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
@@ -296,29 +296,29 @@ var ep =""
 var cont = false
 
 func _ready():
-	
+	$AudioStreamPlayer2D.play(2)
 	$tela_dica/tela_fundo.position = Vector2(360,625)
 	$tela_dica/tela_fundo.scale = Vector2(1,1)
 	
 	timer.start()
 	$Cazumbar.rect_size= Vector2(300,90)
-	$Cazumbar.rect_position= Vector2(60,40)
+	$Cazumbar.rect_position= Vector2(60,10)
 	$Cazumbar/Label.modulate = Color(0, 0, 0, 1)
 	$Cazumbar/Label.text = "Cazumbar"
 	
 	$Voltar.rect_size= Vector2(300,90)
-	$Voltar.rect_position= Vector2(400,40)
+	$Voltar.rect_position= Vector2(400,10)
 	$Voltar/Label2.modulate = Color(0, 0, 0, 1)
 	$Voltar/Label2.text = "Voltar"
 	
-	$Label3.rect_position= Vector2(60,200)
-	$Label3.modulate = Color(0, 0, 0, 1)
+	$Label3.rect_position= Vector2(60,120)
+	$Label3.modulate = Color(0, 0, 0, 9)
 	
 	
 	$tela_dica/tela_fundo/Label.modulate = Color(0, 0, 0, 3)
 	var file = File.new()
 	file.open("res://Player.txt", File.READ)
-	$Label3.text = "Estamos em " + file.get_as_text().split(":")[1].split(";")[0]
+	$Label3.text = "Você estar em " + file.get_as_text().split(":")[1].split(";")[0]
 	ep =file.get_as_text().split(":")[1].split(";")[0]
 	texture = load(mapa[ep][0])
 	$Dica1.rect_position = posicao[ep][0]
@@ -335,6 +335,7 @@ var move= false;
 var b1= false;
 var b2= false;
 var b3= false;
+
 #var centro = false
 
 func _process(delta):
