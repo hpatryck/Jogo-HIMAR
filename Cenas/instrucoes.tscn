@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Materiais/fonts/BRITANIC.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Materiais/fonts/IMPACT.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=3]
 [ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=4]
@@ -17,7 +16,7 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=2]
 size = 25
 use_filter = true
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [node name="instrucoes" type="Sprite"]
 position = Vector2( 180, 320 )

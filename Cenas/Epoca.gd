@@ -7,15 +7,15 @@ const mapa ={
 	"São Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
 	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa/mapa_imperatriz.jpeg" ],
 	"Grajaú": ["res://Materiais/Imagens/news imagens/mapa/mapa_grajau.jpg"],
-	"Gurupi": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg"],
+	"Gurupi": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg"],####
 	"Pindaré": ["res://Materiais/Imagens/news imagens/mapa/telaPindare2.jpg"  ],
 	#///////////////////////Novas Cidades //////////////////////////////#
 	"Alcântara": ["res://Materiais/Imagens/news imagens/mapa/telaAlcântarap.jpg"],
-	"Guimarães": ["res://Materiais/Imagens/news imagens/mapa/telaAlcântarap.jpg" ],
+	"Guimarães": [ "res://Materiais/Imagens/news imagens/mapa/telaguimaraesP (1).jpg"  ],
 	"Buriticupu": [ "res://Materiais/Imagens/news imagens/mapa/buriticupuP.jpg" ],
 	"Caxias": ["res://Materiais/Imagens/news imagens/mapa/telaMapaCaxiasMa2.jpg"  ],
 	
-	"Carolina": ["res://Materiais/Imagens/news imagens/mapa/telaViana.jpg" ],
+	"Carolina": [ "res://Materiais/Imagens/news imagens/mapa/carolina (1).jpg"  ],
 	"Barrerinhas": ["res://Materiais/Imagens/news imagens/mapa/telaBarerinhas.jpg" ],
 	"Codó": ["res://Materiais/Imagens/news imagens/mapa/codo.jpg"   ],
 	"Santa Inês": [ "res://Materiais/Imagens/news imagens/mapa/santaines.jpg"   ],
@@ -30,15 +30,15 @@ const posicao ={
 	"Grajaú":[Vector2(175,320), Vector2(400,575),Vector2(30,780)],
 	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
 	"Pindaré":[Vector2(400,340),Vector2(130,430),Vector2(90,610)],
-	"Alcântara": [Vector2(418,318), Vector2(130,455),Vector2(50,750)],
-	"Guimarães":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
-	"Buriticupu":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Alcântara": [Vector2(418,318), Vector2(170,450),Vector2(65,740)],
+	"Guimarães":[Vector2(390,300), Vector2(170,390),Vector2(260,570)],
+	"Buriticupu":[Vector2(220,300), Vector2(330,640),Vector2(180,880)],
 	"Caxias":[Vector2(360,410),Vector2(415,570),Vector2(50,570)],   #////////////#
-	"Carolina":[Vector2(322,176),Vector2(65,410),Vector2(290,730)],
-	"Barrerinhas": [Vector2(400,250), Vector2(120,750),Vector2(450,680)],
-	"Codó":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
-	"Santa Inês":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
-	"Viana":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	"Carolina":[Vector2(40,365),Vector2(315,440),Vector2(190,785)],
+	"Barrerinhas": [Vector2(290,275), Vector2(450,500),Vector2(110,750)],
+	"Codó":[Vector2(250,350), Vector2(120,470),Vector2(460,750)],
+	"Santa Inês":[Vector2(490,290), Vector2(380,600),Vector2(125,700)],
+	"Viana":[Vector2(180,430),Vector2(360,580),Vector2(170,800)],
 }
 
 const size_b = {
@@ -47,15 +47,15 @@ const size_b = {
 	"Grajaú":[Vector2(250,240), Vector2(400,600),Vector2(300,200)],
 	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
 	"Pindaré":[Vector2(170,145),Vector2(180,110),Vector2(220,110)],
-	"Alcântara": [Vector2(145,118), Vector2(310,90),Vector2(190,115)],
-	"Guimarães":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
-	"Buriticupu":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
+	"Alcântara": [Vector2(130,130), Vector2(285,115),Vector2(185,150)],
+	"Guimarães":[Vector2(120,110), Vector2(160,130),Vector2(150,142)],
+	"Buriticupu":[Vector2(150,110), Vector2(150,150),Vector2(150,140)],
 	"Caxias":[Vector2(210,120),Vector2(200,150),Vector2(190,150)], #//////////////#
-	"Carolina":[Vector2(322,176),Vector2(65,410),Vector2(290,730)],
-	"Barrerinhas": [Vector2(400,250), Vector2(120,750),Vector2(450,680)],
-	"Codó":[Vector2(390,170), Vector2(100,400),Vector2(375,570)],
-	"Santa Inês":[Vector2(220,300), Vector2(400,600),Vector2(30,800)],
-	"Viana":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	"Carolina":[Vector2(180,120),Vector2(145,285),Vector2(150,150)],
+	"Barrerinhas": [Vector2(170,222), Vector2(190,210),Vector2(210,170)],
+	"Codó":[Vector2(250,130), Vector2(160,230),Vector2(170,160)],
+	"Santa Inês":[Vector2(120,100), Vector2(110,130),Vector2(150,140)],
+	"Viana":[Vector2(180,120),Vector2(250,230),Vector2(180,160)],
 	
 }
 const telaf ={
@@ -65,9 +65,9 @@ const telaf ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Imperatriz": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
+	"res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .png",
+	 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.png",
+	 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia .png"
 	],
 	"Grajaú": [
 		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
@@ -80,9 +80,12 @@ const telaf ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Pindaré": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
+		
+		 "res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho .png", 
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.png",
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Amanda.jpg"
+		
+		
 	],
 	"Alcântara": [ 
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
@@ -110,14 +113,14 @@ const telaf ={
 		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
 	],
 	"Barrerinhas": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/Maria.png",
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
-	"Codó": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
+	"Codó": ["res://Materiais/Imagens/news imagens/personagens/codo/Cah.png",
+	 "res://Materiais/Imagens/news imagens/personagens/codo/Gi.png", 
+	"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.png"
+	
 	],
 	"Santa Inês": [
 		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
@@ -167,9 +170,9 @@ const texto ={
 		"Eu ouvi uma pessoa dizendo para um piá que estava indo para o leste do estado atras de uma fabrica de algodão"
 	],
 	"Alcântara": [ 
-	"res://Materiais/Imagens/news imagens/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/dica3_saoLuis.jpeg"
+	"Passou uma pessoa muito estranha  ",
+	"Uma pessoa muito estrnha acabou de sair daqui" ,
+	"Agora pouca teve um suspeito saindo daqui"
 	],
 	"Guimarães": [
 	"sinto muito nao poder lhe ajudar \n não avistei nada de estranho por aqui",
@@ -220,9 +223,9 @@ const img_f ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
 	],
 	"Imperatriz": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
+		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .png", 
+		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.png",
+		 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia .png"
 	],
 	"Grajaú": [
 		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
@@ -235,9 +238,10 @@ const img_f ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
 	],
 	"Pindaré": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+		
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho .png",
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.png",
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Amanda.jpg"
 	],
 	
 		"Alcântara": [ 
@@ -266,14 +270,15 @@ const img_f ={
 		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
 	],
 	"Barrerinhas": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/barrerinhas/Maria.png",
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Codó": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+		"res://Materiais/Imagens/news imagens/personagens/codo/Cah.png",
+		"res://Materiais/Imagens/news imagens/personagens/codo/Gi.png",
+		"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.png"
+		
 	],
 	"Santa Inês": [
 		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
@@ -297,7 +302,7 @@ var cont = false
 
 func _ready():
 	$AudioStreamPlayer2D.play(2)
-	$tela_dica/tela_fundo.position = Vector2(360,625)
+	$tela_dica/tela_fundo.position = Vector2(360,640)
 	$tela_dica/tela_fundo.scale = Vector2(1,1)
 	
 	timer.start()
@@ -312,7 +317,7 @@ func _ready():
 	$Voltar/Label2.text = "Voltar"
 	
 	$Label3.rect_position= Vector2(60,120)
-	$Label3.modulate = Color(0, 0, 0, 9)
+	#$Label3.modulate = Color(0, 0, 0, 1)
 	
 	
 	$tela_dica/tela_fundo/Label.modulate = Color(0, 0, 0, 3)
