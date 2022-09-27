@@ -41,6 +41,28 @@ const posicao ={
 	"Viana":[Vector2(180,430),Vector2(360,580),Vector2(170,800)],
 }
 
+const playerSize = Vector2(20, 60)
+
+const paths = {
+	"Sao Luis": [[], [], [], []],
+	"Imperatriz": [[], [], [], []],
+	"Grajaú": [[], [], [], []],
+	"Gurupi": [[], [], [], []],
+	"Pindaré": [[], [], [], []],
+	"Alcântara": [
+		[Vector2(435, 572), Vector2(490, 540), Vector2(507, 493), Vector2(490, 457), Vector2(472, 420)], 
+		[Vector2(250, 560), Vector2(260, 545)], 
+		[Vector2(230, 630), Vector2(244, 782), Vector2(230, 842), Vector2(195, 861)], [Vector2(240, 584)]],
+	"Guimarães":[[], [], [], []],
+	"Buriticupu":[[], [], [], []],
+	"Caxias":[[], [], [], []], #//////////////#
+	"Carolina":[[], [], [], []],
+	"Barrerinhas": [[], [], [], []],
+	"Codó":[[], [], [], []],
+	"Santa Inês":[[], [], [], []],
+	"Viana":[[], [], [], []],
+}
+
 const size_b = {
 	"São Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
 	"Imperatriz":[Vector2(250,240), Vector2(300,180),Vector2(230,200)],
@@ -333,6 +355,9 @@ func _ready():
 	$Dica1.rect_size = size_b[ep][0]
 	$Dica2.rect_size = size_b[ep][1]
 	$Dica3.rect_size = size_b[ep][2]
+	
+	if len(paths[ep][3]) > 0:
+		$player.set_position(paths[ep][3][0]-playerSize)
 	#$centro/shape.position = Vector2(200,300)
 
 ###################################################### player ###########################################################
@@ -344,21 +369,28 @@ var b3= false;
 #var centro = false
 
 func _process(delta):
-
 	if move:
-		if b1:
-			$player.move_and_collide($player.position.direction_to(d1())*3)
-			if $player.position >= d1():
-				out()
-		if b2:
-			$player.move_and_collide($player.position.direction_to(d2())*3)
-			if $player.position >= d2():
-				out()
-				
-		if b3:
-			$player.move_and_collide($player.position.direction_to(d3())*3)
-			if $player.position >= d3():
-				out()
+		if len(paths[ep][op]) > 0:
+			for i in paths[ep][op]:
+				$player.move_and_collide($player.position.direction_to(i-playerSize)*0.25)
+				if $player.position == i-playerSize:
+					pass
+			#out()
+		else:
+			if b1:
+				$player.move_and_collide($player.position.direction_to(d1())*3)
+				if $player.position >= d1():
+					out()
+			if b2:
+				$player.move_and_collide($player.position.direction_to(d2())*3)
+				if $player.position >= d2():
+					out()
+					
+			if b3:
+				$player.move_and_collide($player.position.direction_to(d3())*3)
+				if $player.position >= d3():
+					out()
+
 
 func out():
 	mostrar_dica()
@@ -384,6 +416,7 @@ func movimentacao():
 #######################################################################################################################3
 
 func _on_Dica1_pressed():
+	print(0)
 	op = 0
 	b1= true
 	d1()
@@ -391,12 +424,14 @@ func _on_Dica1_pressed():
 	
 
 func _on_Dica2_pressed():
+	print(1)
 	op = 1
 	b2 = true
 	d2()
 	movimentacao()
 
 func _on_Dica3_pressed():
+	print(2)
 	b3 = true
 	op = 2
 	d3()
