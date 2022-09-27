@@ -44,12 +44,12 @@ const posicao ={
 const playerSize = Vector2(20, 60)
 
 const paths = {
-	"Sao Luis": [[], [], [], []],
+	"São Luis": [[], [], [], []],
 	"Imperatriz": [[], [], [], []],
 	"Grajaú": [[], [], [], []],
 	"Gurupi": [[], [], [], []],
 	"Pindaré": [[], [], [], []],
-	"Alcântara": [
+	"Alcântara": [       
 		[Vector2(435, 572), Vector2(490, 540), Vector2(507, 493), Vector2(490, 457), Vector2(472, 420)], 
 		[Vector2(250, 560), Vector2(260, 545)], 
 		[Vector2(230, 630), Vector2(244, 782), Vector2(230, 842), Vector2(195, 861)], [Vector2(240, 584)]],
@@ -165,15 +165,15 @@ const personagem = [
 
 const texto ={
 	"São Luis": [ 
-		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a populaçâo cam a criação da estrada Belém_Breasília.",
+		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
 		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada.\n Eu não entendi foi nada.",
-		"O quê? suspeito?\n Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a decada de 1980, vivia o ciclo do arroz.Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
+		"O quê? suspeito?\n Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
 	],
 	"Imperatriz": [
 		
-		" Ho meu filho/a! \n Passou um suspeito por aqui sim!\n Ele falava alguma coisa sem sentido. Queria saber sobrre um atentado contra um tal de Leão Leda.",
-		"'Mirmã' nao sei nada não! Passou um suspeito por aqui, mas dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no certão do maranhao. Que parece, aconteceu no final do seculo XIX e no inicio do século XX."  ,
-		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independencia política do sertão do maranhão. "
+		" Ho meu filho/a! \n Passou um suspeito por aqui sim!\n Ele falava alguma coisa sem sentido. Queria saber sobre um atentado contra um tal de Leão Leda.",
+		"'Mirmã' não sei nada não! Passou um suspeito por aqui, mas dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no sertão do maranhão. Que parece, aconteceu no final do século XIX e no inicio do século XX."  ,
+		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independência política do sertão do maranhão. "
 	],
 	"Grajaú": [
 		"Uma pessoa estranha passou por aqui dizendo que ia atrás da primeira cidade com iluminação elétrica...\n\n Mas por que ? Se na nossa cidade já tem!",
@@ -184,22 +184,22 @@ const texto ={
 	"Gurupi": [
 		"Acho que não vi nenhum suspeito por aqui.",
 		"não vi nada de estranho por aqui.",
-		"nenhuma pessoas suspeita passou por aqui"
+		"nenhuma pessoa suspeita passou por aqui"
 	],
 	"Pindaré": [
 		"Sim, uma pessoa estranha veio me perguntar onde ficava a cidade da umbanda ",
-		"Pequeno, um suspeito disse que estava indo atras de um piá chamado Wilson Nonato, ele tambem disse que os pais dele o chama de Bita.",
-		"Eu ouvi uma pessoa dizendo para um piá que estava indo para o leste do estado atras de uma fabrica de algodão"
+		"Pequeno, um suspeito disse que estava indo atrás de um piá chamado Wilson Nonato, ele também disse que os pais dele o chama de Bita.",
+		"Eu ouvi uma pessoa dizendo para um piá que estava indo para o leste do estado atrás de uma fábrica de algodão"
 	],
 	"Alcântara": [ 
 	"Passou uma pessoa muito estranha  ",
-	"Uma pessoa muito estrnha acabou de sair daqui" ,
+	"Uma pessoa muito estranha acabou de sair daqui" ,
 	"Agora pouca teve um suspeito saindo daqui"
 	],
 	"Guimarães": [
-	"sinto muito nao poder lhe ajudar \n não avistei nada de estranho por aqui",
+	"sinto muito não poder lhe ajudar \n não avistei nada de estranho por aqui",
 	"não, não, \n estar tudo em paz por aqui!",
-	"não vi nada de estraho por aqui"
+	"não vi nada de estranho por aqui"
 	],
 	"Buriticupu": [
 		"Suspeito? \n Não vi nenhum aqui não.",
@@ -207,19 +207,19 @@ const texto ={
 		"Não passou nenhum suspeito por aqui"
 	],
 	"Caxias": [
-		"nao vi nada de estranho por aqui ",
-	"nao posso lhe ajuda, nao sei de nada"  ,
-	"desculpa, mas nao v nenhum suspeito por aqui"
+		"não vi nada de estranho por aqui ",
+	"não posso lhe ajudar, não sei de nada"  ,
+	"desculpa, mas não vi nenhum suspeito por aqui"
 	],
 	"Carolina": [
 		"Não passou nenhum suspeito por aqui",
 		"Não avistei nenhum suspeito. ",
-		"por aqui nao passou niguem estranho"
+		"por aqui não passou ninguém estranho"
 	],
 	"Barrerinhas": [ 
-	"um suspeito passou dizendo que ía participar do debate contra os higiênitas para nao demolirem a cidade, nao entendi foi nada.",
-	"Acho que sim,\n uma pessoa estranha disse que estava indo para uma cidade onde os edificios estava entrando em ruina e as pessoas estavam indo embora de lá"  ,
-	"Um suspeito disse que estava a caminho da cidade que foi a maior industria do estado, \n mas ela esta decaindo aos poucos depois da eboliçao da escravatura"
+	"um suspeito passou dizendo que ia participar do debate contra os higiênitas para não demolirem a cidade, não entendi foi nada.",
+	"Acho que sim,\n uma pessoa estranha disse que estava indo para uma cidade onde os edifícios estava entrando em ruina e as pessoas estavam indo embora de lá"  ,
+	"Um suspeito disse que estava a caminho da cidade que foi a maior indústria do estado, \n mas ela esta decaindo aos poucos depois da abolição da escravatura"
 	],
 	"Codó": [
 	"res://Materiais/Imagens/cenario_dica/tela2d1.png",
@@ -227,22 +227,23 @@ const texto ={
 	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
 	],
 	"Santa Inês": [
-		"nã, nenhum suspeito passou por aqui",
-		"oh querido/a, sinto muito \n mas nao posso lhe ajudar,",
-		"Suspeito? \n nããão siô, por aqui esta tudo na santa paz."
+		"não, nenhum suspeito passou por aqui",
+		"oh querido/a, sinto muito \n mas não posso lhe ajudar,",
+		"Suspeito? \n nããão siô, por aqui está tudo na santa paz."
 	],
 	"Viana": [
-		"não passou ninguem estranho",
-	"nao vi ninguem suspeito por aqui"  ,
+		"não passou ninguém estranho",
+	"não vi ninguém suspeito por aqui"  ,
 	"não vi nada de estranho por aqui"
 	],
 }
 
+
 const img_f ={
-	"São Luis": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
+	"São Luis": [       
+		"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
 	],
 	"Imperatriz": [
 		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .png", 
@@ -345,7 +346,7 @@ func _ready():
 	$tela_dica/tela_fundo/Label.modulate = Color(0, 0, 0, 3)
 	var file = File.new()
 	file.open("res://Player.txt", File.READ)
-	$Label3.text = "Você estar em " + file.get_as_text().split(":")[1].split(";")[0]
+	$Label3.text = "Você está em " + file.get_as_text().split(":")[1].split(";")[0]
 	ep =file.get_as_text().split(":")[1].split(";")[0]
 	texture = load(mapa[ep][0])
 	$Dica1.rect_position = posicao[ep][0]
@@ -356,7 +357,7 @@ func _ready():
 	$Dica2.rect_size = size_b[ep][1]
 	$Dica3.rect_size = size_b[ep][2]
 	
-	if len(paths[ep][3]) > 0:
+	if len(paths[ep][3]) > 0:    
 		$player.set_position(paths[ep][3][0]-playerSize)
 	#$centro/shape.position = Vector2(200,300)
 
@@ -375,7 +376,7 @@ func _process(delta):
 				$player.move_and_collide($player.position.direction_to(i-playerSize)*0.25)
 				if $player.position == i-playerSize:
 					pass
-			#out()
+			out()
 		else:
 			if b1:
 				$player.move_and_collide($player.position.direction_to(d1())*3)
@@ -444,9 +445,9 @@ func _on_Voltar_pressed():
 	pass
 
 func _on_Timer_timeout():
-	$Timer.wait_time = 0.1
-	$tela_dica/tela_fundo/Label.visible_characters = $tela_dica/tela_fundo/Label.visible_characters+3
-	
+	$Timer.wait_time = 0.1       
+	$tela_dica/tela_fundo/Label.visible_characters = $tela_dica/tela_fundo/Label.visible_characters+1
+
 func _on_Button_pressed():
 	get_tree().change_scene( "res://Cenas/grajau0-2.tscn")
 
