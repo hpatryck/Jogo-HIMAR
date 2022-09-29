@@ -139,8 +139,8 @@ margin_bottom = 1284.0
 stream = ExtResource( 9 )
 
 [node name="Sprite" parent="." instance=ExtResource( 12 )]
-position = Vector2( 54.5, 66.5 )
-scale = Vector2( 0.165278, 0.108594 )
+position = Vector2( 57.5, 82.4999 )
+scale = Vector2( 0.173611, 0.133594 )
 
 [node name="botao1" type="TextureButton" parent="."]
 visible = false

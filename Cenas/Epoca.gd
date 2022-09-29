@@ -88,9 +88,9 @@ const telaf ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Imperatriz": [
-	"res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .png",
-	 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.png",
-	 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia .png"
+		 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .jpg",
+		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.jpg", 
+		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia.jpg"
 	],
 	"Grajaú": [
 		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
@@ -103,11 +103,9 @@ const telaf ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Pindaré": [
-		
-		 "res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho .png", 
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.png",
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho.jpg", 
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",
 		"res://Materiais/Imagens/news imagens/personagens/pindare/Amanda.jpg"
-		
 		
 	],
 	"Alcântara": [ 
@@ -136,13 +134,15 @@ const telaf ={
 		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
 	],
 	"Barrerinhas": [ 
-	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/Maria.png",
+	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/maria.jpg",
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
-	"Codó": ["res://Materiais/Imagens/news imagens/personagens/codo/Cah.png",
-	 "res://Materiais/Imagens/news imagens/personagens/codo/Gi.png", 
-	"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.png"
+	"Codó": [
+	
+	"res://Materiais/Imagens/news imagens/personagens/codo/Cah.jpg", 
+	"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg", 
+	"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg"
 	
 	],
 	"Santa Inês": [
@@ -242,19 +242,19 @@ const texto ={
 
 const img_f ={
 	"São Luis": [       
-		"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
+	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Imperatriz": [
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .png", 
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.png",
-		 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia .png"
+		 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .jpg",
+		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.jpg", 
+		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia.jpg"
 	],
 	"Grajaú": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
+		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
 	],
 	"Gurupi": [
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
@@ -262,10 +262,10 @@ const img_f ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
 	],
 	"Pindaré": [
-		
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho .png",
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.png",
+		"res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho.jpg", 
+	"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",
 		"res://Materiais/Imagens/news imagens/personagens/pindare/Amanda.jpg"
+		
 	],
 	
 		"Alcântara": [ 
@@ -299,9 +299,10 @@ const img_f ={
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
 	"Codó": [
-		"res://Materiais/Imagens/news imagens/personagens/codo/Cah.png",
-		"res://Materiais/Imagens/news imagens/personagens/codo/Gi.png",
-		"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.png"
+		"res://Materiais/Imagens/news imagens/personagens/codo/Cah.jpg", 
+		"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg", 
+		"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg"
+		
 		
 	],
 	"Santa Inês": [
@@ -352,14 +353,14 @@ func _ready():
 	$Cazumbar.rect_size= Vector2(250,90)
 	$Cazumbar.rect_position= Vector2(150,10)
 	$Cazumbar/Label.modulate = Color(0, 0, 0, 1)
-	$Cazumbar/Label.text = "Cazumbar"
+	$Cazumbar/Label.text = "CAZUMBAR"
 	
 	$Voltar.rect_size= Vector2(250,90)
 	$Voltar.rect_position= Vector2(450,10)
 	$Voltar/Label2.modulate = Color(0, 0, 0, 1)
-	$Voltar/Label2.text = "Voltar"
+	$Voltar/Label2.text = "VOLTAR"
 	
-	$Label3.rect_position= Vector2(60,120)
+	$Label3.rect_position= Vector2(100,120)
 	#$Label3.modulate = Color(0, 0, 0, 1)
 	
 	
