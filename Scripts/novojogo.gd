@@ -32,7 +32,7 @@ func _insertDB():
 	
 func _on_TextureButton3_pressed():
 	if _insertDB():
-		get_tree().change_scene("res://Cenas/Epoca.tscn"  )
+		get_tree().change_scene("res://Cenas/danca_cazumba.tscn" )
 	pass # Replace with function body.
 
 func _on_TextureButton2_pressed():

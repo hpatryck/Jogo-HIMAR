@@ -1,7 +1,8 @@
 extends Sprite
 
 onready var timer := $Timer as Timer
-
+var file = File.new()
+var eg = 10
 
 const mapa ={
 	"São Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
@@ -316,6 +317,21 @@ const img_f ={
 	
 }
 
+
+const energia ={ 
+"0":["res://Materiais/Imagens/news imagens/tela_sino/sino1azul.jpg"],
+"1":["res://Materiais/Imagens/news imagens/tela_sino/sino2azul.jpg"], 
+"2":["res://Materiais/Imagens/news imagens/tela_sino/sino3azul.jpg"], 
+"3":["res://Materiais/Imagens/news imagens/tela_sino/sino4azul.jpg"], 
+"4":["res://Materiais/Imagens/news imagens/tela_sino/sino5azul.jpg"], 
+"5":["res://Materiais/Imagens/news imagens/tela_sino/sino6azul.jpg"], 
+"6":["res://Materiais/Imagens/news imagens/tela_sino/sino7azul.jpg"],
+"7":["res://Materiais/Imagens/news imagens/tela_sino/sino8azul.jpg"], 
+"8":["res://Materiais/Imagens/news imagens/tela_sino/sino9azul.jpg"],
+"9":["res://Materiais/Imagens/news imagens/tela_sino/sino10azul.jpg"]
+}
+
+
 onready var tela = $tela_dica/tela_fundo
 onready var pers = $tela_dica/tela_fundo/personagem
 onready var dica = $tela_dica/tela_fundo/Label
@@ -324,18 +340,22 @@ var ep =""
 var cont = false
 
 func _ready():
-	$AudioStreamPlayer2D.play(2)
+	
+	
+	
+	
+	#$AudioStreamPlayer2D.play(2)
 	$tela_dica/tela_fundo.position = Vector2(360,640)
 	$tela_dica/tela_fundo.scale = Vector2(1,1)
 	
 	timer.start()
-	$Cazumbar.rect_size= Vector2(300,90)
-	$Cazumbar.rect_position= Vector2(60,10)
+	$Cazumbar.rect_size= Vector2(250,90)
+	$Cazumbar.rect_position= Vector2(150,10)
 	$Cazumbar/Label.modulate = Color(0, 0, 0, 1)
 	$Cazumbar/Label.text = "Cazumbar"
 	
-	$Voltar.rect_size= Vector2(300,90)
-	$Voltar.rect_position= Vector2(400,10)
+	$Voltar.rect_size= Vector2(250,90)
+	$Voltar.rect_position= Vector2(450,10)
 	$Voltar/Label2.modulate = Color(0, 0, 0, 1)
 	$Voltar/Label2.text = "Voltar"
 	
@@ -344,7 +364,7 @@ func _ready():
 	
 	
 	$tela_dica/tela_fundo/Label.modulate = Color(0, 0, 0, 3)
-	var file = File.new()
+	#var file = File.new()
 	file.open("res://Player.txt", File.READ)
 	$Label3.text = "Você está em " + file.get_as_text().split(":")[1].split(";")[0]
 	ep =file.get_as_text().split(":")[1].split(";")[0]
@@ -360,6 +380,9 @@ func _ready():
 	if len(paths[ep][3]) > 0:    
 		$player.set_position(paths[ep][3][0]-playerSize)
 	#$centro/shape.position = Vector2(200,300)
+
+	
+
 
 ###################################################### player ###########################################################
 var move= false;
@@ -476,4 +499,15 @@ func _on_contnuacao_pressed():
 	#_on_Timer_timeout()
 	
 	cont = true
+	pass # Replace with function body.
+
+
+func _on_botao1_pressed():
+	get_tree().change_scene("res://tela_de_energia.tscn"  )
+	
+	file.open("res://Player.txt", File.READ)
+	var eg =file.get_as_text().split(";")[1]
+	#$Sprite.texture = load(energia[eg][0])
+	$tela_dica.visible = is_visible_in_tree()
+	print(eg)
 	pass # Replace with function body.

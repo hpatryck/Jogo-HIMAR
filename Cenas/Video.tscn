@@ -3,8 +3,8 @@
 [ext_resource path="res://Materiais/Videos/WhatsApp Video 2022-03-22 at 11.32.25 (video-converter.com) (1).webm" type="VideoStream" id=1]
 
 [node name="VideoPlayer" type="VideoPlayer"]
-margin_right = 409.0
-margin_bottom = 709.0
+margin_right = 364.0
+margin_bottom = 654.0
 stream = ExtResource( 1 )
 autoplay = true
 

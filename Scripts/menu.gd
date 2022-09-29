@@ -12,7 +12,14 @@ const botao = [ "res://Materiais/Botões/botão.png",
 ]
 
 func _ready():
-	$AudioStreamPlayer2D.play()
+	
+	var file = File.new()
+	file.open("res://Player.txt", File.READ)
+	var info = file.get_as_text().split(":")
+	var leve = info[1].split(";")
+	write(info[0] + ":" +"São Luis" + ";" + "9")
+	
+	#$AudioStreamPlayer2D.play()
 	position= Vector2(180,320)
 	scale = Vector2(0.5,0.5)
 	$botao1.rect_position = Vector2(-140,-156)
@@ -42,7 +49,10 @@ func _ready():
 	pass
 	
 	
-
+func write(txt):
+	var file = File.new()
+	file.open("res://Player.txt", File.WRITE)
+	file.store_string(txt)
 
 
 func _on_botao1_pressed():

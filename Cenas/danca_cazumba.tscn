@@ -1,17 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Materiais/Videos/teste_video_cazumba dancando.webm" type="VideoStream" id=1]
+[ext_resource path="res://Materiais/Videos/CAZUMBA Maranhão (Imagem de fundo de tela para celular) (1) (video-converter.com) (1).webm" type="VideoStream" id=1]
 [ext_resource path="res://Scripts/danca_cazumba.gd" type="Script" id=2]
+[ext_resource path="res://Materiais/Sons/musicaDaDancaCazumba.mp3" type="AudioStream" id=3]
 
 [node name="VideoPlayer" type="VideoPlayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 stream = ExtResource( 1 )
+autoplay = true
 script = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 7.0
 one_shot = true
 autostart = true
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -28,7 +28,7 @@ func _ready():
 	print(current)
 	var cor = Color(0, 0, 0, 1)
 	$estamos_em.modulate = cor
-	$estamos_em.text = "Estamos em "+ current +" \nVamos para: "
+	$estamos_em.text = "Estamos em "+ current +" \nVamos para "
 	$Voltar/Label.text = "Voltar"
 	$Voltar/Label.modulate = cor
 	$Opt1/Label.modulate = cor
@@ -37,16 +37,27 @@ func _ready():
 	$Opt1/Label.text = (path[current][0])
 	$Opt2/Label2.text = (path[current][1])
 	$Opt3/Label3.text = (path[current][2])
+	pass
 
 
 func saveCurrent(current):
+	
 	var file = File.new()
 	file.open("res://Player.txt", File.READ)
 	var info = file.get_as_text().split(":")
 	var leve = info[1].split(";")
+	var eg =  file.get_as_text().split(";")[1]
+	
+	var eg1 = int(eg) - 1
+	eg = str(eg1)
+	leve[1]= eg
 	leve[0] = current
 	print(info[0] + ":" + leve[0] + ";" + leve[1])
 	write(info[0] + ":" + leve[0] + ";" + leve[1])
+	
+	pass
+	
+	
 
 func write(txt):
 	var file = File.new()
@@ -63,23 +74,17 @@ func _on_Opt1_pressed():
 	saveCurrent(current)
 	get_tree().change_scene("res://Cenas/danca_cazumba.tscn")
 	
-	#get_tree().change_scene("res://Cenas/Epoca.tscn")
-
-
+	
 func _on_Opt2_pressed():
 	current = path[current][1]
 	saveCurrent(current)
 	get_tree().change_scene("res://Cenas/danca_cazumba.tscn")
-	#get_tree().change_scene("res://Cenas/Epoca.tscn")
-
 
 func _on_Opt3_pressed():
 	current = path[current][2]
 	saveCurrent(current)
 	get_tree().change_scene("res://Cenas/danca_cazumba.tscn")
-	#get_tree().change_scene("res://Cenas/Epoca.tscn")
-
-
+	
 func _on_Opt4_pressed():
 	if current != 0:
 		current = 0

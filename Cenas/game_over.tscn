@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Materiais/fonts/vademecum.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Materiais/Imagens/news imagens/tela_sino/sino0azul.jpg" type="Texture" id=2]
+[ext_resource path="res://Materiais/fonts/BRITANIC.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/game_over.gd" type="Script" id=4]
+[ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=5]
+[ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=6]
+[ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 181.5, 321.5 )
+scale = Vector2( 0.501389, 0.500781 )
+texture = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.494118, 0.176471, 0.0784314, 1 )
+margin_left = -241.277
+margin_top = 246.615
+margin_right = 242.723
+margin_bottom = 399.615
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+
+[node name="voltar" type="TextureButton" parent="."]
+margin_left = -144.598
+margin_top = 394.384
+margin_right = 113.402
+margin_bottom = 476.384
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 7 )
+expand = true
+
+[node name="Label" type="Label" parent="voltar"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 12.0
+margin_top = 8.0
+margin_right = 250.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 2 )
+text = "VOLTAR"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
