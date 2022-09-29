@@ -167,7 +167,7 @@ const personagem = [
 const texto ={
 	"São Luis": [ 
 		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
-		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada.\n Eu não entendi foi nada.",
+		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
 		"O quê? suspeito?\n Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
 	],
 	"Imperatriz": [
@@ -177,10 +177,10 @@ const texto ={
 		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independência política do sertão do maranhão. "
 	],
 	"Grajaú": [
-		"Uma pessoa estranha passou por aqui dizendo que ia atrás da primeira cidade com iluminação elétrica...\n\n Mas por que ? Se na nossa cidade já tem!",
-		"Sim, passou sim. Ele falou que ia atrás de açúcar e rapadura em um engenho. Até falei que tinha um comércio aqui perto...\n mas ele me ignorou.",
-		"Um suspeito passou dizendo que ia pegar um trem que passasse no terminal dos canaviais... \n\n Eu achei ele meio estranho."
-		
+	"Um suspeito tinha me dito que um novo município estava sendo gerado a partir da cidade de monção que se chamava engenho de São Pedro de Alcântara.",
+	"Sim, passou sim, ele falou que estava indo para uma cidade com um engenho que estava prestes a fechar, pois a indústria açucareira entrou em decadência.",
+	"Um suspeito passou dizendo que ia presenciar a construção da  ferrovia que faz ligação ao engenho central e ao porto terminal dos canaviais."
+
 	],
 	"Gurupi": [
 		"Acho que não vi nenhum suspeito por aqui.",
@@ -188,14 +188,15 @@ const texto ={
 		"nenhuma pessoa suspeita passou por aqui"
 	],
 	"Pindaré": [
-		"Sim, uma pessoa estranha veio me perguntar onde ficava a cidade da umbanda ",
-		"Pequeno, um suspeito disse que estava indo atrás de um piá chamado Wilson Nonato, ele também disse que os pais dele o chama de Bita.",
-		"Eu ouvi uma pessoa dizendo para um piá que estava indo para o leste do estado atrás de uma fábrica de algodão"
+	"Um suspeito disse que iria para inauguração da primeira indústria da cidade. Ele também disse que a indústria iria se chamar de companhia manufatureira e agrícola. ",
+	"Uma pessoa suspeita   tinha me dito que  depois  que o presidente Afonso Pena veio visitar o Estado foi decidido  que iriam colocar uma estação ferroviária em uma cidade da região dos cocais, ele disse que a estrada de ferro é de São Luís até Cajazeira.",
+	"Uma pessoa disse para um senhor que estava indo para o leste do estado, atrás de uma cidade da umbanda. "
+
 	],
 	"Alcântara": [ 
-	"Passou uma pessoa muito estranha  ",
-	"Uma pessoa muito estranha acabou de sair daqui" ,
-	"Agora pouca teve um suspeito saindo daqui"
+	"!!!!  ",
+	"!!!" ,
+	"!!!"
 	],
 	"Guimarães": [
 	"sinto muito não poder lhe ajudar \n não avistei nada de estranho por aqui",
@@ -218,14 +219,14 @@ const texto ={
 		"por aqui não passou ninguém estranho"
 	],
 	"Barrerinhas": [ 
-	"um suspeito passou dizendo que ia participar do debate contra os higiênitas para não demolirem a cidade, não entendi foi nada.",
-	"Acho que sim,\n uma pessoa estranha disse que estava indo para uma cidade onde os edifícios estava entrando em ruina e as pessoas estavam indo embora de lá"  ,
-	"Um suspeito disse que estava a caminho da cidade que foi a maior indústria do estado, \n mas ela esta decaindo aos poucos depois da abolição da escravatura"
+	"Um suspeito passou dizendo que ia participar do debate contra os higiênitas para não demolirem a cidade, não entendi nada.",
+	"Acho que sim, uma pessoa estranha disse que estava indo para uma cidade onde os edifícios estavam ficando arruinados e as pessoas estavam indo embora de lá.",
+	"Um suspeito disse que estava a caminho da cidade que foi a maior indústria do estado, mas que está decaindo aos poucos depois da abolição da escravatura."
 	],
 	"Codó": [
-	"res://Materiais/Imagens/cenario_dica/tela2d1.png",
-	"res://Materiais/Imagens/cenario_dica/tela2d2.png",
-	"res://Materiais/Imagens/cenario_dica/tela2d3.png"
+	" Siô, uma pessoa estranho esses dias me perguntou na rua pra que rumo ficam os lençóis maranhenses. Acho que muita gente como ele tá se interessando em conhecer esse lugar, afinal, começaram a divulgar bastante as belezas naturais de lá. Ou então ele queria arrumar emprego, porque a demanda de lá deve aumentar agora com essas divulgações,",
+	"Rapaz, um dia desse passou um homem perguntando por um lugar que haviam descoberto pertróleo aqui no Maranhão. Eu não me lembro direito, mas um pessoal respondeu a ele que nesse lugar tinha umas dunas de areia. Agora eu mesmo não sei onde fica isso, você sabe!?",
+	"Meu fi, esses dias um rapaz me perguntou onde ficava um lugar que tinha acabado de se emancipar lá pro norte. Eu não soube respondê-lo, mas ele, convicto, disse que estava a caminho de lá"
 	],
 	"Santa Inês": [
 		"não, nenhum suspeito passou por aqui",
@@ -294,7 +295,7 @@ const img_f ={
 		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
 	],
 	"Barrerinhas": [ 
-		"res://Materiais/Imagens/news imagens/personagens/barrerinhas/Maria.png",
+	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/maria.jpg",
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
 	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
 	],
@@ -495,7 +496,7 @@ func _on_contnuacao_pressed():
 	tela.texture = load(img_f[ep][op])
 	dica.text = texto[ep][op]
 	#if $tela_dica/tela_fundo/Label.visible_characters >50:
-	$tela_dica/tela_fundo/Label.lines_skipped = 6
+	$tela_dica/tela_fundo/Label.lines_skipped = 7
 	#timer.start()
 	#_on_Timer_timeout()
 	
