@@ -443,14 +443,19 @@ var b3= false;
 
 #var centro = false
 
+func goToNextPoint(p):
+	$player.move_and_collide($player.position.direction_to(paths[ep][op][p]-playerSize)*0.25)
+	if $player.position == paths[ep][op][p]-playerSize:
+		if len(paths[ep][op]) < p+1:
+			goToNextPoint(p+1)
+		else:
+			return
+
 func _process(delta):
 	if move:
 		if len(paths[ep][op]) > 0:
-			for i in paths[ep][op]:
-				$player.move_and_collide($player.position.direction_to(i-playerSize)*0.25)
-				if $player.position == i-playerSize:
-					pass
-			#out()
+			goToNextPoint(0)
+			out()
 		else:
 			if b1:
 				$player.move_and_collide($player.position.direction_to(d1())*3)
