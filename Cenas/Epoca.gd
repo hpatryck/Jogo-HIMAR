@@ -450,7 +450,7 @@ func _process(delta):
 				$player.move_and_collide($player.position.direction_to(i-playerSize)*0.25)
 				if $player.position == i-playerSize:
 					pass
-			out()
+			#out()
 		else:
 			if b1:
 				$player.move_and_collide($player.position.direction_to(d1())*3)
