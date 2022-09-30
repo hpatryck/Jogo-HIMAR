@@ -45,23 +45,72 @@ const posicao ={
 const playerSize = Vector2(20, 60)
 
 const paths = {
-	"São Luis": [[], [], [], []],
-	"Imperatriz": [[], [], [], []],
-	"Grajaú": [[], [], [], []],
-	"Gurupi": [[], [], [], []],
-	"Pindaré": [[], [], [], []],
+	"São Luis": [
+		[Vector2(480, 635), Vector2(526, 558), Vector2(490, 480), Vector2(472, 460)], 
+		[Vector2(324, 660)], 
+		[Vector2(297, 765), Vector2(370, 827), Vector2(460, 840), Vector2(507, 824)], 
+		[Vector2(323, 373)]],
+	"Imperatriz": [
+		[Vector2(392, 438)], 
+		[Vector2(489, 468), Vector2(538, 508), Vector2(562, 602)], 
+		[Vector2(422, 535), Vector2(374, 626), Vector2(316, 612), Vector2(280, 572)], 
+		[Vector2(425, 470)]],
+	"Grajaú": [
+		[], 
+		[], 
+		[], 
+		[]],
+	"Gurupi": [
+		[], 
+		[], 
+		[], 
+		[]],
+	"Pindaré": [
+		[Vector2(398, 476), Vector2(428, 457)], 
+		[Vector2(262, 508)], 
+		[Vector2(325, 643), Vector2(232, 708), Vector2(169, 706), Vector2(150, 692)], 
+		[Vector2(358, 523)]],
 	"Alcântara": [       
 		[Vector2(435, 572), Vector2(490, 540), Vector2(507, 493), Vector2(490, 457), Vector2(472, 420)], 
 		[Vector2(250, 560), Vector2(260, 545)], 
-		[Vector2(230, 630), Vector2(244, 782), Vector2(230, 842), Vector2(195, 861)], [Vector2(240, 584)]],
-	"Guimarães":[[], [], [], []],
-	"Buriticupu":[[], [], [], []],
-	"Caxias":[[], [], [], []], #//////////////#
-	"Carolina":[[], [], [], []],
-	"Barrerinhas": [[], [], [], []],
-	"Codó":[[], [], [], []],
+		[Vector2(230, 630), Vector2(244, 782), Vector2(230, 842), Vector2(195, 861)], 
+		[Vector2(240, 584)]],
+	"Guimarães":[
+		[], 
+		[], 
+		[], 
+		[]],
+	"Buriticupu":[
+		[], 
+		[], 
+		[], 
+		[]],
+	"Caxias":[
+		[Vector2(398, 640), Vector2(400, 540), Vector2(444, 510)], 
+		[Vector2(255, 715), Vector2(205, 710)], 
+		[Vector2(410, 735), Vector2(474, 728), Vector2(493, 713)], 
+		[Vector2(322, 700)]],
+	"Carolina":[
+		[], 
+		[], 
+		[], 
+		[]],
+	"Barrerinhas": [
+		[Vector2(406, 722), Vector2(323, 638), Vector2(335, 560), Vector2(395, 500), Vector2(390, 474)], 
+		[Vector2(510, 856), Vector2(410, 898), Vector2(330, 888), Vector2(300, 866)], 
+		[Vector2(534, 688)], 
+		[Vector2(508, 736)]],
+	"Codó":[
+		[], 
+		[], 
+		[], 
+		[]],
 	"Santa Inês":[[], [], [], []],
-	"Viana":[[], [], [], []],
+	"Viana":[
+		[Vector2(249, 737), Vector2(196, 666), Vector2(240, 580), Vector2(270, 540)], 
+		[Vector2(433, 873), Vector2(378, 926), Vector2(250, 932)], 
+		[Vector2(460, 767)], 
+		[Vector2(416, 728)]],
 }
 
 const size_b = {
