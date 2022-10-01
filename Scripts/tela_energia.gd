@@ -17,16 +17,16 @@ const energia = [
 
 
 const energia_azul = [
-	"res://Materiais/Imagens/news imagens/sino_azul/sino1azull.png",
-	 "res://Materiais/Imagens/news imagens/sino_azul/sino2azull.png", 
-	"res://Materiais/Imagens/news imagens/sino_azul/sino3azull.png", 
-	"res://Materiais/Imagens/news imagens/sino_azul/sino4azull.png",
-	 "res://Materiais/Imagens/news imagens/sino_azul/sino5azull.png", 
-	"res://Materiais/Imagens/news imagens/sino_azul/sino6azull.png",
-	 "res://Materiais/Imagens/news imagens/sino_azul/sino7azull.png", 
-	"res://Materiais/Imagens/news imagens/sino_azul/sino8azull.png", 
-	"res://Materiais/Imagens/news imagens/sino_azul/sino9azull.png", 
-	"res://Materiais/Imagens/news imagens/sino_azul/sino10azull.png"
+"res://Materiais/Imagens/news imagens/sino_azul/sino1azull.png",
+ "res://Materiais/Imagens/news imagens/sino_azul/sino2azull.png",
+ "res://Materiais/Imagens/news imagens/sino_azul/sino3azull.png", 
+"res://Materiais/Imagens/news imagens/sino_azul/sino4azull.png", 
+"res://Materiais/Imagens/news imagens/sino_azul/sino5azull.png",
+ "res://Materiais/Imagens/news imagens/sino_azul/sino6azull.png", 
+"res://Materiais/Imagens/news imagens/sino_azul/sino7azull.png", 
+"res://Materiais/Imagens/news imagens/sino_azul/sino8azull.png", 
+"res://Materiais/Imagens/news imagens/sino_azul/sino9azull.png",
+ "res://Materiais/Imagens/news imagens/sino_azul/sino10azull.png"
 	
 ]
 
