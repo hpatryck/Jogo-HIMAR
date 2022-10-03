@@ -24,7 +24,7 @@ font_data = ExtResource( 7 )
 script = ExtResource( 3 )
 
 [node name="tela_fundo" type="Sprite" parent="."]
-position = Vector2( 184, 320 )
+position = Vector2( 180, 320 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 
@@ -69,15 +69,21 @@ align = 1
 valign = 1
 
 [node name="Label" type="Label" parent="tela_fundo"]
+modulate = Color( 0.0392157, 0, 0, 1 )
 margin_left = -204.0
 margin_top = 250.0
 margin_right = 176.0
 margin_bottom = 572.0
 custom_fonts/font = SubResource( 3 )
+text = "y no e puedo parar, hoje cedo quando eu acordei e nao te vi eu pensei em tanta coisa ahhhh tive medo ah como eu chorei eu sofri em segredo tuo isso hoje cedo. quatro zero zero tres olha eu caindo outra vez lembrei que to bloqueado"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
+percent_visible = -0.00543478
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="pressed" from="tela_fundo/cazumbar" to="." method="_on_cazumbar_pressed"]
 [connection signal="pressed" from="tela_fundo/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -49,8 +49,8 @@ func saveCurrent(current):
 	var eg =  file.get_as_text().split(";")[1]
 	
 	var eg1 = int(eg) - 1
-	eg = str(eg1)
-	leve[1]= eg
+	leve[1]= str(eg1)
+	
 	leve[0] = current
 	print(info[0] + ":" + leve[0] + ";" + leve[1])
 	write(info[0] + ":" + leve[0] + ";" + leve[1])

@@ -1,8 +1,7 @@
 extends Sprite
 
-onready var timer := $Timer as Timer
+#onready var timer := $Timer as Timer
 var file = File.new()
-var eg = 10
 
 const mapa ={
 	"São Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
@@ -130,243 +129,11 @@ const size_b = {
 	"Viana":[Vector2(180,120),Vector2(250,230),Vector2(180,160)],
 	
 }
-const telaf ={
-	"São Luis": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Imperatriz": [
-		 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .jpg",
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.jpg", 
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia.jpg"
-	],
-	"Grajaú": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
-	],
-	"Gurupi": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Pindaré": [
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho.jpg", 
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Amanda.jpg"
-		
-	],
-	"Alcântara": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Guimarães": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Buriticupu": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
-	],
-	"Caxias": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Carolina": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
-	],
-	"Barrerinhas": [ 
-	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/maria.jpg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Codó": [
-	
-	"res://Materiais/Imagens/news imagens/personagens/codo/Cah.jpg", 
-	"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg", 
-	"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg"
-	
-	],
-	"Santa Inês": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
-	],
-	"Viana": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	
-}
-
 const personagem = [
 	"res://Materiais/imagens teste/personagem1.jpeg",
 	"res://Materiais/imagens teste/personagem2.jpeg",
 	"res://Materiais/imagens teste/personagem3.jpeg"
 ]
-
-const texto ={
-	"São Luis": [ 
-		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
-		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
-		"O quê? suspeito?\n Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
-	],
-	"Imperatriz": [
-		
-		" Ho meu filho/a! \n Passou um suspeito por aqui sim!\n Ele falava alguma coisa sem sentido. Queria saber sobre um atentado contra um tal de Leão Leda.",
-		"'Mirmã' não sei nada não! Passou um suspeito por aqui, mas dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no sertão do maranhão. Que parece, aconteceu no final do século XIX e no inicio do século XX."  ,
-		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independência política do sertão do maranhão. "
-	],
-	"Grajaú": [
-	"Um suspeito tinha me dito que um novo município estava sendo gerado a partir da cidade de monção que se chamava engenho de São Pedro de Alcântara.",
-	"Sim, passou sim, ele falou que estava indo para uma cidade com um engenho que estava prestes a fechar, pois a indústria açucareira entrou em decadência.",
-	"Um suspeito passou dizendo que ia presenciar a construção da  ferrovia que faz ligação ao engenho central e ao porto terminal dos canaviais."
-
-	],
-	"Gurupi": [
-		"Acho que não vi nenhum suspeito por aqui.",
-		"não vi nada de estranho por aqui.",
-		"nenhuma pessoa suspeita passou por aqui"
-	],
-	"Pindaré": [
-	"Um suspeito disse que iria para inauguração da primeira indústria da cidade. Ele também disse que a indústria iria se chamar de companhia manufatureira e agrícola. ",
-	"Uma pessoa suspeita   tinha me dito que  depois  que o presidente Afonso Pena veio visitar o Estado foi decidido  que iriam colocar uma estação ferroviária em uma cidade da região dos cocais, ele disse que a estrada de ferro é de São Luís até Cajazeira.",
-	"Uma pessoa disse para um senhor que estava indo para o leste do estado, atrás de uma cidade da umbanda. "
-
-	],
-	"Alcântara": [ 
-	"!!!!  ",
-	"!!!" ,
-	"!!!"
-	],
-	"Guimarães": [
-	"sinto muito não poder lhe ajudar \n não avistei nada de estranho por aqui",
-	"não, não, \n estar tudo em paz por aqui!",
-	"não vi nada de estranho por aqui"
-	],
-	"Buriticupu": [
-		"Suspeito? \n Não vi nenhum aqui não.",
-		"não tem nada de estranho por aqui",
-		"Não passou nenhum suspeito por aqui"
-	],
-	"Caxias": [
-		"não vi nada de estranho por aqui ",
-	"não posso lhe ajudar, não sei de nada"  ,
-	"desculpa, mas não vi nenhum suspeito por aqui"
-	],
-	"Carolina": [
-		"Não passou nenhum suspeito por aqui",
-		"Não avistei nenhum suspeito. ",
-		"por aqui não passou ninguém estranho"
-	],
-	"Barrerinhas": [ 
-	"Um suspeito passou dizendo que ia participar do debate contra os higiênitas para não demolirem a cidade, não entendi nada.",
-	"Acho que sim, uma pessoa estranha disse que estava indo para uma cidade onde os edifícios estavam ficando arruinados e as pessoas estavam indo embora de lá.",
-	"Um suspeito disse que estava a caminho da cidade que foi a maior indústria do estado, mas que está decaindo aos poucos depois da abolição da escravatura."
-	],
-	"Codó": [
-	" Siô, uma pessoa estranho esses dias me perguntou na rua pra que rumo ficam os lençóis maranhenses. Acho que muita gente como ele tá se interessando em conhecer esse lugar, afinal, começaram a divulgar bastante as belezas naturais de lá. Ou então ele queria arrumar emprego, porque a demanda de lá deve aumentar agora com essas divulgações,",
-	"Rapaz, um dia desse passou um homem perguntando por um lugar que haviam descoberto pertróleo aqui no Maranhão. Eu não me lembro direito, mas um pessoal respondeu a ele que nesse lugar tinha umas dunas de areia. Agora eu mesmo não sei onde fica isso, você sabe!?",
-	"Meu fi, esses dias um rapaz me perguntou onde ficava um lugar que tinha acabado de se emancipar lá pro norte. Eu não soube respondê-lo, mas ele, convicto, disse que estava a caminho de lá"
-	],
-	"Santa Inês": [
-		"não, nenhum suspeito passou por aqui",
-		"oh querido/a, sinto muito \n mas não posso lhe ajudar,",
-		"Suspeito? \n nããão siô, por aqui está tudo na santa paz."
-	],
-	"Viana": [
-		"não passou ninguém estranho",
-	"não vi ninguém suspeito por aqui"  ,
-	"não vi nada de estranho por aqui"
-	],
-}
-
-
-const img_f ={
-	"São Luis": [       
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Imperatriz": [
-		 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .jpg",
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Di.jpg", 
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia.jpg"
-	],
-	"Grajaú": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"
-	],
-	"Gurupi": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
-	],
-	"Pindaré": [
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Luizinho.jpg", 
-	"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Amanda.jpg"
-		
-	],
-	
-		"Alcântara": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
-	],
-	"Guimarães": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
-	],
-	"Buriticupu": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
-	],
-	"Caxias": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
-	],
-	"Carolina": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
-	],
-	"Barrerinhas": [ 
-	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/maria.jpg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"
-	],
-	"Codó": [
-		"res://Materiais/Imagens/news imagens/personagens/codo/Cah.jpg", 
-		"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg", 
-		"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg"
-		
-		
-	],
-	"Santa Inês": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d1_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d2_grajau.jpeg",
-		"res://Materiais/Imagens/news imagens/personagens/grajau/d3_grajau.jpeg"
-	],
-	"Viana": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d1_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d2_saoLuis.jpeg",
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/d3_saoluis.jpeg"
-	],
-	
-}
 
 
 const energia ={ 
@@ -383,23 +150,28 @@ const energia ={
 }
 
 
-onready var tela = $tela_dica/tela_fundo
-onready var pers = $tela_dica/tela_fundo/personagem
-onready var dica = $tela_dica/tela_fundo/Label
 var op = 0
 var ep =""
 var cont = false
 
+var opc = ""
+var eg = ""
+
+
 func _ready():
 	
 	
+	file.open("res://Player.txt", File.READ)
+	eg =file.get_as_text().split(";")[1]
+	ep =file.get_as_text().split(":")[1].split(";")[0]
+	opc = file.get_as_text().split(":")[0]
+	
+	print(eg + " valor de eg")
+	print(opc + " valor de opc")
+	print(ep + " valor de ep")
 	
 	
-	#$AudioStreamPlayer2D.play(2)
-	$tela_dica/tela_fundo.position = Vector2(360,640)
-	$tela_dica/tela_fundo.scale = Vector2(1,1)
 	
-	timer.start()
 	$Cazumbar.rect_size= Vector2(250,90)
 	$Cazumbar.rect_position= Vector2(150,10)
 	$Cazumbar/Label.modulate = Color(0, 0, 0, 1)
@@ -411,14 +183,11 @@ func _ready():
 	$Voltar/Label2.text = "VOLTAR"
 	
 	$Label3.rect_position= Vector2(100,120)
-	#$Label3.modulate = Color(0, 0, 0, 1)
 	
 	
-	$tela_dica/tela_fundo/Label.modulate = Color(0, 0, 0, 3)
-	#var file = File.new()
+	
 	file.open("res://Player.txt", File.READ)
 	$Label3.text = "Você está em " + file.get_as_text().split(":")[1].split(";")[0]
-	ep =file.get_as_text().split(":")[1].split(";")[0]
 	texture = load(mapa[ep][0])
 	$Dica1.rect_position = posicao[ep][0]
 	$Dica2.rect_position = posicao[ep][1]
@@ -455,25 +224,34 @@ func _process(delta):
 	if move:
 		if len(paths[ep][op]) > 0:
 			goToNextPoint(0)
-			out()
+			get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+			#out()
 		else:
 			if b1:
 				$player.move_and_collide($player.position.direction_to(d1())*3)
 				if $player.position >= d1():
-					out()
+					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+					#out()
 			if b2:
 				$player.move_and_collide($player.position.direction_to(d2())*3)
 				if $player.position >= d2():
-					out()
+					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+					#out()
 					
 			if b3:
 				$player.move_and_collide($player.position.direction_to(d3())*3)
 				if $player.position >= d3():
-					out()
-
+					#out()
+					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+					
+					
+func write(txt):
+	var file = File.new()
+	file.open("res://Player.txt", File.WRITE)
+	file.store_string(txt)
 
 func out():
-	mostrar_dica()
+	#mostrar_dica()
 	desabilitar()
 	$player.visible = false
 
@@ -497,7 +275,9 @@ func movimentacao():
 
 func _on_Dica1_pressed():
 	print(0)
+	opc = "0"
 	op = 0
+	write(opc+ ":" +ep + ";" + eg)
 	b1= true
 	d1()
 	movimentacao()
@@ -505,13 +285,17 @@ func _on_Dica1_pressed():
 
 func _on_Dica2_pressed():
 	print(1)
+	opc = "1"
 	op = 1
+	write(opc+ ":" +ep + ";" + eg)
 	b2 = true
 	d2()
 	movimentacao()
 
 func _on_Dica3_pressed():
 	print(2)
+	opc = "2"
+	write(opc+ ":" +ep + ";" + eg)
 	b3 = true
 	op = 2
 	d3()
@@ -523,10 +307,7 @@ func _on_Cazumbar_pressed():
 func _on_Voltar_pressed():
 	pass
 
-func _on_Timer_timeout():
-	$Timer.wait_time = 0.1       
-	$tela_dica/tela_fundo/Label.visible_characters = $tela_dica/tela_fundo/Label.visible_characters+1
-
+	
 func _on_Button_pressed():
 	get_tree().change_scene( "res://Cenas/grajau0-2.tscn")
 
@@ -537,33 +318,14 @@ func desabilitar():
 	$Cazumbar.disabled = true
 	$Voltar.disabled = true
 	$contnuacao.visible = true
-	
-func mostrar_dica():
-	$tela_dica.visible = is_visible_in_tree()
-	if cont == false:
-		tela.texture = load(telaf[ep][op])
-		dica.text = texto[ep][op]
-	
 
 
-func _on_contnuacao_pressed():
-	tela.texture = load(img_f[ep][op])
-	dica.text = texto[ep][op]
-	#if $tela_dica/tela_fundo/Label.visible_characters >50:
-	$tela_dica/tela_fundo/Label.lines_skipped = 7
-	#timer.start()
-	#_on_Timer_timeout()
-	
-	cont = true
-	pass # Replace with function body.
+
 
 
 func _on_botao1_pressed():
 	get_tree().change_scene("res://tela_de_energia.tscn"  )
 	
-	file.open("res://Player.txt", File.READ)
-	var eg =file.get_as_text().split(";")[1]
 	#$Sprite.texture = load(energia[eg][0])
 	$tela_dica.visible = is_visible_in_tree()
-	print(eg)
 	pass # Replace with function body.
