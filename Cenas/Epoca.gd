@@ -224,13 +224,19 @@ func _process(delta):
 	if move:
 		if len(paths[ep][op]) > 0:
 			goToNextPoint(0)
-			get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+			if ep == "Alcântara":
+				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
+			else:
+				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
 			#out()
 		else:
 			if b1:
 				$player.move_and_collide($player.position.direction_to(d1())*3)
 				if $player.position >= d1():
-					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+					if ep == "Codó" or ep == "Alcântara":
+						get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
+					else:
+						get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
 					#out()
 			if b2:
 				$player.move_and_collide($player.position.direction_to(d2())*3)

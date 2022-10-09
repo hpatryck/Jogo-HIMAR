@@ -4,6 +4,8 @@ onready var timer := $Timer as Timer
 func _ready():
 	$musica.play()
 	timer.start()
+	$TextureButton/Label.text = "Pular"
+	$TextureButton/Label.modulate = Color(0,0,0,1)
 	pass
 
 
@@ -18,4 +20,9 @@ func _on_Timer_timeout():
 	else:
 		get_tree().change_scene("res://Cenas/Epoca.tscn")
 	
+	pass # Replace with function body.
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://Cenas/Epoca.tscn")
 	pass # Replace with function body.
