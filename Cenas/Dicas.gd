@@ -21,9 +21,9 @@ const telaf ={
 		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"#2-
 	],
 	"Carutapera": [
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",#2
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,#4-
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"#3
+	"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg",#2
+	"res://Materiais/Imagens/news imagens/personagens/codo/Luizinho.jpg",#1
+	"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg"#2-
 	],
 	"Pindaré": [
 		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",#3-
@@ -183,11 +183,11 @@ func _ready():
 	
 	#print("op ="+ opc + "\n ep = "+ ep +"\n eg ="+eg)
 	
-	$tela_fundo/cazumbar.rect_position = Vector2(-200,-600)
+	$tela_fundo/cazumbar.rect_position = Vector2(-300,-600)
 	$tela_fundo/cazumbar/Label.modulate = Color(0,0,0,1)
 	$tela_fundo/cazumbar/Label.text = "CAZUMBAR"
 	
-	$tela_fundo/voltar.rect_position = Vector2(80,-600)
+	$tela_fundo/voltar.rect_position = Vector2(90,-600)
 	$tela_fundo/Label.rect_position= Vector2(-190,250)
 	$tela_fundo/voltar/Label.text = "VOLTAR"
 	

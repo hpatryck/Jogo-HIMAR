@@ -3,19 +3,19 @@ extends Sprite
 
 const path = {
 	"São Luis": ["Imperatriz", "Guimarães", "Carutapera"],
-	"Imperatriz": ["Viana", "Grajaú", "São Luis"],
-	"Grajaú": ["Imperatriz", "Pindaré", "Carolina"],
-	"Carutapera": ["Caxias", "Carolina", "Buriticupu"],
-	"Pindaré": ["São Luis", "Carutapera", "Codó"],
+	"Imperatriz": ["Viana", "Grajaú", "Buriticupu"],
+	"Grajaú": ["Santa Inês", "Pindaré", "Carolina"],
+	"Carutapera": ["São Luis", "Pindaré", "Buriticupu"],
+	"Pindaré": ["Carolina", "Carutapera", "Codó"],
 	"Alcântara": ["Santa Inês", "Viana", "Codó"],
-	"Guimarães": ["Caxias", "Santa Inês", "São Luis"],
-	"Buriticupu": ["Imperatriz", "Carolina", "Carutapera"],
-	"Caxias": ["São Luis", "Imperatriz", "Santa Inês"],
-	"Carolina": ["São Luis", "Viana", "Santa Inês"],
+	"Guimarães": ["Caxias", "Codó", "São Luis"],
+	"Buriticupu": ["Imperatriz", "Codó", "Grajaú"],
+	"Caxias": ["Barrerinhas", "Imperatriz", "Santa Inês"],
+	"Carolina": ["São Luis", "Grajaú", "Pindaré"],
 	"Barrerinhas": ["Alcântara", "Viana", "Caxias"],
 	"Codó": ["Guimarães", "Buriticupu", "Barrerinhas"],
 	"Santa Inês": ["Imperatriz", "Guimarães", "Carutapera"],
-	"Viana": ["São Luis", "Imperatriz", "Caxias"],
+	"Viana": ["São Luis", "Imperatriz", "Barrerinhas"],
 	
 }
 var current = ""
