@@ -7,6 +7,7 @@ const reliquias = [
 ]
 var file = File.new()
 func _ready():
+	$AudioStreamPlayer2D.play()
 	
 	file.open("res://Player.txt", File.READ)
 	var ep =file.get_as_text().split(":")[1].split(";")[0]

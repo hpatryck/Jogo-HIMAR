@@ -156,7 +156,7 @@ var eg = ""
 
 
 func _ready():
-	
+	$AudioStreamPlayer2D.play(2)
 	
 	file.open("res://Player.txt", File.READ)
 	eg =file.get_as_text().split(";")[1]

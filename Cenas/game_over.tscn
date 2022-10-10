@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Materiais/fonts/vademecum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Materiais/Imagens/news imagens/tela_sino/sino0azul.jpg" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=5]
 [ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=6]
 [ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=7]
+[ext_resource path="res://Materiais/Sons/over.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -54,5 +55,9 @@ valign = 1
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+pitch_scale = 0.76
 
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
