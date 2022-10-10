@@ -3,7 +3,7 @@ extends Sprite
 
 const reliquias = [
 		"res://Materiais/Imagens/news imagens/reliquia/reliquia1.jpeg",
-		"res://Materiais/Imagens/news imagens/reliquia/ultima_reliquia.jpeg"
+		"res://Materiais/Imagens/news imagens/reliquia/reliquia_1.jpeg"
 ]
 var file = File.new()
 func _ready():
