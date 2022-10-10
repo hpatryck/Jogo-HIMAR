@@ -1,25 +1,22 @@
 extends Sprite
 
-#onready var timer := $Timer as Timer
 var file = File.new()
 
 const mapa ={
 	"São Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
 	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa/mapa_imperatriz.jpeg" ],
 	"Grajaú": ["res://Materiais/Imagens/news imagens/mapa/mapa_grajau.jpg"],
-	"Gurupi": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg"],####
+	"Carutapera": [ "res://Materiais/Imagens/news imagens/mapa/13.Carutapera.jpg" ],
 	"Pindaré": ["res://Materiais/Imagens/news imagens/mapa/telaPindare2.jpg"  ],
-	#///////////////////////Novas Cidades //////////////////////////////#
 	"Alcântara": ["res://Materiais/Imagens/news imagens/mapa/telaAlcântarap.jpg"],
-	"Guimarães": [ "res://Materiais/Imagens/news imagens/mapa/telaguimaraesP (1).jpg"  ],
+	"Guimarães": ["res://Materiais/Imagens/news imagens/mapa/telaguimaraes.jpg"   ],
 	"Buriticupu": [ "res://Materiais/Imagens/news imagens/mapa/buriticupuP.jpg" ],
 	"Caxias": ["res://Materiais/Imagens/news imagens/mapa/telaMapaCaxiasMa2.jpg"  ],
-	
 	"Carolina": [ "res://Materiais/Imagens/news imagens/mapa/carolina (1).jpg"  ],
 	"Barrerinhas": ["res://Materiais/Imagens/news imagens/mapa/telaBarerinhas.jpg" ],
-	"Codó": ["res://Materiais/Imagens/news imagens/mapa/codo.jpg"   ],
+	"Codó": [  "res://Materiais/Imagens/news imagens/mapa/codo1.jpg"  ],
 	"Santa Inês": [ "res://Materiais/Imagens/news imagens/mapa/santaines.jpg"   ],
-	"Viana": ["res://Materiais/Imagens/news imagens/mapa/telaViana.jpg"  ],
+	"Viana": ["res://Materiais/Imagens/news imagens/mapa/Viana.jpg" ],
 	
 	}
 
@@ -28,17 +25,17 @@ const posicao ={
 	"São Luis": [Vector2(200,250), Vector2(240,555),Vector2(460,660)],
 	"Imperatriz":[Vector2(320,200), Vector2(110,440),Vector2(420,600)],
 	"Grajaú":[Vector2(175,320), Vector2(400,575),Vector2(30,780)],
-	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	"Carutapera":[Vector2(230,360),Vector2(250,550),Vector2(220,850)],
 	"Pindaré":[Vector2(400,340),Vector2(130,430),Vector2(90,610)],
 	"Alcântara": [Vector2(418,318), Vector2(170,450),Vector2(65,740)],
-	"Guimarães":[Vector2(390,300), Vector2(170,390),Vector2(260,570)],
+	"Guimarães":[Vector2(390,300), Vector2(185,425),Vector2(315,580)],
 	"Buriticupu":[Vector2(220,300), Vector2(330,640),Vector2(180,880)],
 	"Caxias":[Vector2(360,410),Vector2(415,570),Vector2(50,570)],   #////////////#
 	"Carolina":[Vector2(40,365),Vector2(315,440),Vector2(190,785)],
 	"Barrerinhas": [Vector2(290,275), Vector2(450,500),Vector2(110,750)],
-	"Codó":[Vector2(250,350), Vector2(120,470),Vector2(460,750)],
+	"Codó":[Vector2(100,600), Vector2(330,460),Vector2(230,770)],
 	"Santa Inês":[Vector2(490,290), Vector2(380,600),Vector2(125,700)],
-	"Viana":[Vector2(180,430),Vector2(360,580),Vector2(170,800)],
+	"Viana":[Vector2(40,550),Vector2(450,650),Vector2(320,770)],
 }
 
 const playerSize = Vector2(20, 60)
@@ -59,7 +56,7 @@ const paths = {
 		[], 
 		[], 
 		[]],
-	"Gurupi": [
+	"Carutapera": [
 		[], 
 		[], 
 		[], 
@@ -116,17 +113,17 @@ const size_b = {
 	"São Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
 	"Imperatriz":[Vector2(250,240), Vector2(300,180),Vector2(230,200)],
 	"Grajaú":[Vector2(250,240), Vector2(400,600),Vector2(300,200)],
-	"Gurupi":[Vector2(200,315),Vector2(470,480),Vector2(92,750)],
+	"Carutapera":[Vector2(200,110),Vector2(170,170),Vector2(135,135)],
 	"Pindaré":[Vector2(170,145),Vector2(180,110),Vector2(220,110)],
 	"Alcântara": [Vector2(130,130), Vector2(285,115),Vector2(185,150)],
-	"Guimarães":[Vector2(120,110), Vector2(160,130),Vector2(150,142)],
+	"Guimarães":[Vector2(125,100), Vector2(155,90),Vector2(180,220)],
 	"Buriticupu":[Vector2(150,110), Vector2(150,150),Vector2(150,140)],
 	"Caxias":[Vector2(210,120),Vector2(200,150),Vector2(190,150)], #//////////////#
 	"Carolina":[Vector2(180,120),Vector2(145,285),Vector2(150,150)],
 	"Barrerinhas": [Vector2(170,222), Vector2(190,210),Vector2(210,170)],
-	"Codó":[Vector2(250,130), Vector2(160,230),Vector2(170,160)],
+	"Codó":[Vector2(175,100), Vector2(115,200),Vector2(135,135)],
 	"Santa Inês":[Vector2(120,100), Vector2(110,130),Vector2(150,140)],
-	"Viana":[Vector2(180,120),Vector2(250,230),Vector2(180,160)],
+	"Viana":[Vector2(190,110),Vector2(150,140),Vector2(135,135)],
 	
 }
 const personagem = [

@@ -16,15 +16,9 @@ func _ready():
 		$voltar/Label.text = "Memu"
 	if ep == "Codó":
 		texture = load(reliquias[0])
-		$voltar/Label.text = "continuar"
-	
+		$voltar/Label.text = "Continuar"
 	pass
 
-func write(txt):
-	var file = File.new()
-	file.open("res://Player.txt", File.WRITE)
-	file.store_string(txt)
-	
 func _on_voltar_pressed():
 	var ep1 =file.get_as_text().split(":")[1].split(";")[0]
 	if ep1 == "Alcântara":

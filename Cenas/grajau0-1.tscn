@@ -75,12 +75,10 @@ margin_top = 250.0
 margin_right = 176.0
 margin_bottom = 572.0
 custom_fonts/font = SubResource( 3 )
-text = "y no e puedo parar, hoje cedo quando eu acordei e nao te vi eu pensei em tanta coisa ahhhh tive medo ah como eu chorei eu sofri em segredo tuo isso hoje cedo. quatro zero zero tres olha eu caindo outra vez lembrei que to bloqueado"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
-percent_visible = -0.00543478
 
 [node name="Timer" type="Timer" parent="."]
 
