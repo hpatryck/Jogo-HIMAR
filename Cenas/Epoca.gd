@@ -2,6 +2,9 @@ extends Sprite
 
 var file = File.new()
 
+onready var path2D = get_node("Path2D")
+onready var follow = get_node("Path2D/PathFollow2D")
+onready var play = get_node("Path2D/PathFollow2D/player")
 const mapa ={
 	"São Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
 	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa/mapa_imperatriz.jpeg" ],
@@ -19,7 +22,6 @@ const mapa ={
 	"Viana": ["res://Materiais/Imagens/news imagens/mapa/Viana.jpg" ],
 	
 	}
-
 
 const posicao ={
 	"São Luis": [Vector2(200,250), Vector2(240,555),Vector2(460,660)],
@@ -43,9 +45,9 @@ const playerSize = Vector2(20, 60)
 const paths = {
 	"São Luis": [
 		[Vector2(480, 635), Vector2(526, 558), Vector2(490, 480), Vector2(472, 460)], 
-		[Vector2(324, 660)], 
 		[Vector2(297, 765), Vector2(370, 827), Vector2(460, 840), Vector2(507, 824)], 
-		[Vector2(323, 373)]],
+		[Vector2(323, 373)], 
+		[Vector2(324, 660)]],
 	"Imperatriz": [
 		[Vector2(392, 438)], 
 		[Vector2(489, 468), Vector2(538, 508), Vector2(562, 602)], 
@@ -195,7 +197,7 @@ func _ready():
 	$Dica3.rect_size = size_b[ep][2]
 	
 	if len(paths[ep][3]) > 0:    
-		$player.set_position(paths[ep][3][0]-playerSize)
+		play.set_position(paths[ep][3][0]-playerSize)
 	#$centro/shape.position = Vector2(200,300)
 
 	
@@ -211,21 +213,27 @@ var b3= false;
 
 func goToNextPoint(p):
 	$player.move_and_collide($player.position.direction_to(paths[ep][op][p]-playerSize)*0.25)
-	if $player.position == paths[ep][op][p]-playerSize:
-		if len(paths[ep][op]) < p+1:
-			goToNextPoint(p+1)
-		else:
-			return
+	while($player.position != paths[ep][op][p]-playerSize):
+		yield(get_tree().create_timer(0.2), "timeout")
+	if len(paths[ep][op]) < p+1:
+		goToNextPoint(p+1)
+	else:
+		return
 
 func _process(delta):
 	if move:
 		if len(paths[ep][op]) > 0:
-			goToNextPoint(0)
+			var c = Curve2D.new()
+			c.add_point(paths[ep][op][0], play.position, paths[ep][op][len(paths[ep][op])-1])
+			for i in paths[ep][op]:
+				c.add_point(i)
+			path2D.set_curve(c)
+			follow.set_offset(follow.get_offset()+150*delta)
 			if ep == "Alcântara":
 				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 			else:
 				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
-			#out()
+			out()
 		else:
 			if b1:
 				$player.move_and_collide($player.position.direction_to(d1())*3)
@@ -234,17 +242,17 @@ func _process(delta):
 						get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 					else:
 						get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
-					#out()
+					out()
 			if b2:
 				$player.move_and_collide($player.position.direction_to(d2())*3)
 				if $player.position >= d2():
 					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
-					#out()
+					out()
 					
 			if b3:
 				$player.move_and_collide($player.position.direction_to(d3())*3)
 				if $player.position >= d3():
-					#out()
+					out()
 					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
 					
 					
@@ -256,7 +264,7 @@ func write(txt):
 func out():
 	#mostrar_dica()
 	desabilitar()
-	$player.visible = false
+	play.visible = false
 
 func d1():
 	$direcao/shape.position = posicao[ep][op]
@@ -273,7 +281,6 @@ func d3():
 
 func movimentacao():
 	move = true
-	$player/anim.play("andando")
 #######################################################################################################################3
 
 func _on_Dica1_pressed():
