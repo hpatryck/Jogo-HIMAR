@@ -13,7 +13,7 @@ func _ready():
 func moveu(cenaout, cenain):
 	db.query_with_bindings("select * from infojogador where status = '1';")
 	var player = db.query_result
-	db.query_with_bindings("select pont from pontuacao where cenaout = ? and cenain = ?;", [cenaout, cenain])
+	db.query_with_bindings("select pont from pontos where cenaout = ? and cenain = ?;", [cenaout, cenain])
 	var incremento = db.query_result
 	db.query_with_bindings("""update infojogador set score = ? where
 	 	id = ?;""", [player[0].score+incremento[0].pont, player[0].id])
