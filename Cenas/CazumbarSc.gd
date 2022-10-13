@@ -65,15 +65,20 @@ func saveCurrent(current):
 	pass
 	
 func moveu(cenaout, cenain):
-	db.query_with_bindings("select * from cidades where id in (?, ?);", [cenaout, cenain])
-	var ids = db.query_result
+	db.query_with_bindings("select id from cidades where nome = ?;", [cenaout])
+	var ids = [db.query_result[0]]
+	db.query_with_bindings("select id from cidades where nome = ?;", [cenain])
+	ids.append(db.query_result[0])
+	print(ids)
 	db.query_with_bindings("select * from infojogador where status = '1';")
 	var player = db.query_result
+	print(player)
 	db.query_with_bindings("select ponto from pontos where cenaout = ? and cenain = ?;", [ids[0].id, ids[1].id])
 	var incremento = db.query_result
+	print(incremento)
 	db.query_with_bindings("""update infojogador set score = ? where
-	 	id = ?;""", [player[0].score+incremento[0].pont, player[0].id])
-	db.close()
+	 	id = ?;""", [player[0].score+incremento[0].ponto, player[0].id])
+	db.close_db()
 
 func write(txt):
 	var file = File.new()
