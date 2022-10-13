@@ -162,6 +162,12 @@ var eg = ""
 
 
 func _ready():
+	var t = ''
+	var id = 1
+	for i in size_b:
+		t += "(" + id+", '" + i + "'),\n"
+		id += 1
+	print(t)
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()
