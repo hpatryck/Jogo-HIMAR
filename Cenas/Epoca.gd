@@ -2,9 +2,6 @@ extends Sprite
 
 var file = File.new()
 
-const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
-var db
-var db_name = "res://SQLite/database.db"
 
 onready var path2D = get_node("Path2D")
 onready var follow = get_node("Path2D/PathFollow2D")
@@ -162,15 +159,6 @@ var eg = ""
 
 
 func _ready():
-	var t = ''
-	var id = 1
-	for i in size_b:
-		t += "(" + id+", '" + i + "'),\n"
-		id += 1
-	print(t)
-	db = SQLite.new()
-	db.path = db_name
-	db.open_db()
 	
 	$AudioStreamPlayer2D.play(2)
 	
@@ -224,17 +212,6 @@ var b2= false;
 var b3= false;
 
 #var centro = false
-
-func moveu(cenaout, cenain):
-	db.query_with_bindings("select * from cidades where id in (?, ?);", [cenaout, cenain])
-	var ids = db.query_result
-	db.query_with_bindings("select * from infojogador where status = '1';")
-	var player = db.query_result
-	db.query_with_bindings("select ponto from pontos where cenaout = ? and cenain = ?;", [ids[0].id, ids[1].id])
-	var incremento = db.query_result
-	db.query_with_bindings("""update infojogador set score = ? where
-	 	id = ?;""", [player[0].score+incremento[0].pont, player[0].id])
-	db.close()
 
 func goToNextPoint(p):
 	$player.move_and_collide($player.position.direction_to(paths[ep][op][p]-playerSize)*0.25)

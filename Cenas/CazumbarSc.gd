@@ -1,6 +1,10 @@
 extends Sprite
 
 
+const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
+var db
+var db_name = "res://SQLite/database.db"
+
 const path = {
 	"São Luis": ["Imperatriz", "Guimarães", "Carutapera"],
 	"Imperatriz": ["Viana", "Grajaú", "Buriticupu"],
@@ -21,6 +25,9 @@ const path = {
 var current = ""
 
 func _ready():
+	db = SQLite.new()
+	db.path = db_name
+	db.open_db()
 	$AudioStreamPlayer2D.play(2)
 	var file = File.new()
 	file.open("res://player.txt", File.READ)
@@ -41,15 +48,15 @@ func _ready():
 
 
 func saveCurrent(current):
-	
 	var file = File.new()
 	file.open("res://Player.txt", File.READ)
 	var info = file.get_as_text().split(":")
 	var leve = info[1].split(";")
 	var eg =  file.get_as_text().split(";")[1]
+	#moveu(leve[0], current)
 	
 	var eg1 = int(eg) - 1
-	leve[1]= str(eg1)
+	leve[1] = str(eg1)
 	
 	leve[0] = current
 	print(info[0] + ":" + leve[0] + ";" + leve[1])
@@ -57,7 +64,16 @@ func saveCurrent(current):
 	
 	pass
 	
-	
+func moveu(cenaout, cenain):
+	db.query_with_bindings("select * from cidades where id in (?, ?);", [cenaout, cenain])
+	var ids = db.query_result
+	db.query_with_bindings("select * from infojogador where status = '1';")
+	var player = db.query_result
+	db.query_with_bindings("select ponto from pontos where cenaout = ? and cenain = ?;", [ids[0].id, ids[1].id])
+	var incremento = db.query_result
+	db.query_with_bindings("""update infojogador set score = ? where
+	 	id = ?;""", [player[0].score+incremento[0].pont, player[0].id])
+	db.close()
 
 func write(txt):
 	var file = File.new()
