@@ -41,75 +41,21 @@ const posicao ={
 	"Viana":[Vector2(40,550),Vector2(450,650),Vector2(320,770)],
 }
 
-const playerSize = Vector2(20, 60)
-
-const paths = {
-	"São Luis": [
-		[Vector2(480, 635), Vector2(526, 558), Vector2(490, 480), Vector2(472, 460)], 
-		[Vector2(297, 765), Vector2(370, 827), Vector2(460, 840), Vector2(507, 824)], 
-		[Vector2(323, 373)], 
-		[Vector2(324, 660)]],
-	"Imperatriz": [
-		[Vector2(392, 438)], 
-		[Vector2(489, 468), Vector2(538, 508), Vector2(562, 602)], 
-		[Vector2(422, 535), Vector2(374, 626), Vector2(316, 612), Vector2(280, 572)], 
-		[Vector2(425, 470)]],
-	"Grajaú": [
-		[], 
-		[], 
-		[], 
-		[]],
-	"Carutapera": [
-		[], 
-		[], 
-		[], 
-		[]],
-	"Pindaré": [
-		[Vector2(398, 476), Vector2(428, 457)], 
-		[Vector2(262, 508)], 
-		[Vector2(325, 643), Vector2(232, 708), Vector2(169, 706), Vector2(150, 692)], 
-		[Vector2(358, 523)]],
-	"Alcântara": [       
-		[Vector2(435, 572), Vector2(490, 540), Vector2(507, 493), Vector2(490, 457), Vector2(472, 420)], 
-		[Vector2(250, 560), Vector2(260, 545)], 
-		[Vector2(230, 630), Vector2(244, 782), Vector2(230, 842), Vector2(195, 861)], 
-		[Vector2(240, 584)]],
-	"Guimarães":[
-		[], 
-		[], 
-		[], 
-		[]],
-	"Buriticupu":[
-		[], 
-		[], 
-		[], 
-		[]],
-	"Caxias":[
-		[Vector2(398, 640), Vector2(400, 540), Vector2(444, 510)], 
-		[Vector2(255, 715), Vector2(205, 710)], 
-		[Vector2(410, 735), Vector2(474, 728), Vector2(493, 713)], 
-		[Vector2(322, 700)]],
-	"Carolina":[
-		[], 
-		[], 
-		[], 
-		[]],
-	"Barrerinhas": [
-		[Vector2(406, 722), Vector2(323, 638), Vector2(335, 560), Vector2(395, 500), Vector2(390, 474)], 
-		[Vector2(510, 856), Vector2(410, 898), Vector2(330, 888), Vector2(300, 866)], 
-		[Vector2(534, 688)], 
-		[Vector2(508, 736)]],
-	"Codó":[
-		[], 
-		[], 
-		[], 
-		[]],
-	"Santa Inês":[[], [], [], []],
-	"Viana":[
-		[Vector2(249, 737), Vector2(196, 666), Vector2(240, 580), Vector2(270, 540)], 
-		[Vector2(433, 873), Vector2(378, 926), Vector2(250, 932)], 
-		[Vector2(460, 767)], 
-		[Vector2(416, 728)]],
+const start = {
+	"São Luis": Vector2(324, 660),
+	"Imperatriz": Vector2(425, 470),
+	"Grajaú": false,
+	"Carutapera": false,
+	"Pindaré": Vector2(358, 523),
+	"Alcântara": Vector2(240, 584),
+	"Guimarães":false,
+	"Buriticupu":false,
+	"Caxias":Vector2(322, 700),
+	"Carolina":false,
+	"Barrerinhas": Vector2(508, 736),
+	"Codó":false,
+	"Santa Inês":false,
+	"Viana":Vector2(416, 728)
 }
 
 const size_b = {
@@ -127,8 +73,25 @@ const size_b = {
 	"Codó":[Vector2(175,100), Vector2(115,200),Vector2(135,135)],
 	"Santa Inês":[Vector2(120,100), Vector2(110,130),Vector2(150,140)],
 	"Viana":[Vector2(190,110),Vector2(150,140),Vector2(135,135)],
-	
 }
+
+const entrances = {
+	"São Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
+	"Imperatriz":[Vector2(250,240), Vector2(300,180),Vector2(230,200)],
+	"Grajaú":[Vector2(250,240), Vector2(400,600),Vector2(300,200)],
+	"Carutapera":[Vector2(200,110),Vector2(170,170),Vector2(135,135)],
+	"Pindaré":[Vector2(170,145),Vector2(180,110),Vector2(220,110)],
+	"Alcântara": [Vector2(130,130), Vector2(285,115),Vector2(185,150)],
+	"Guimarães":[Vector2(125,100), Vector2(155,90),Vector2(180,220)],
+	"Buriticupu":[Vector2(150,110), Vector2(150,150),Vector2(150,140)],
+	"Caxias":[Vector2(210,120),Vector2(200,150),Vector2(190,150)], #//////////////#
+	"Carolina":[Vector2(180,120),Vector2(145,285),Vector2(150,150)],
+	"Barrerinhas": [Vector2(170,222), Vector2(190,210),Vector2(210,170)],
+	"Codó":[Vector2(175,100), Vector2(115,200),Vector2(135,135)],
+	"Santa Inês":[Vector2(120,100), Vector2(110,130),Vector2(150,140)],
+	"Viana":[Vector2(190,110),Vector2(150,140),Vector2(135,135)],
+}
+
 const personagem = [
 	"res://Materiais/imagens teste/personagem1.jpeg",
 	"res://Materiais/imagens teste/personagem2.jpeg",
@@ -198,8 +161,8 @@ func _ready():
 	$Dica2.rect_size = size_b[ep][1]
 	$Dica3.rect_size = size_b[ep][2]
 	
-	if len(paths[ep][3]) > 0:    
-		play.set_position(paths[ep][3][0]-playerSize)
+	if start[ep]:    
+		$player.set_position(start[ep])
 	#$centro/shape.position = Vector2(200,300)
 
 	
@@ -213,49 +176,32 @@ var b3= false;
 
 #var centro = false
 
-func goToNextPoint(p):
-	$player.move_and_collide($player.position.direction_to(paths[ep][op][p]-playerSize)*0.25)
-	while($player.position != paths[ep][op][p]-playerSize):
-		yield(get_tree().create_timer(0.2), "timeout")
-	if len(paths[ep][op]) < p+1:
-		goToNextPoint(p+1)
-	else:
-		return
+func irPraDica(pos):
+	var hit = 5
+	$player.move_and_collide($player.position.direction_to(pos)*3)
+	if($player.position[0] > pos[0]-hit and $player.position[0] < pos[0]+hit and $player.position[1] > pos[1]-hit and $player.position[1] < pos[1]+hit):
+		return true
 
 func _process(delta):
-	if move:
-		if len(paths[ep][op]) > 0:
-			var c = Curve2D.new()
-			c.add_point(paths[ep][op][0], play.position, paths[ep][op][len(paths[ep][op])-1])
-			for i in paths[ep][op]:
-				c.add_point(i)
-			path2D.set_curve(c)
-			follow.set_offset(follow.get_offset()+150*delta)
-			if ep == "Alcântara":
+	if b1:
+		if irPraDica(d1()):
+			if ep == "Codó" or ep == "Alcântara":
 				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 			else:
 				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
-			out()
-		else:
-			if b1:
-				$player.move_and_collide($player.position.direction_to(d1())*3)
-				if $player.position >= d1():
-					if ep == "Codó" or ep == "Alcântara":
-						get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
-					else:
-						get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
-					out()
-			if b2:
-				$player.move_and_collide($player.position.direction_to(d2())*3)
-				if $player.position >= d2():
-					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
-					out()
-					
-			if b3:
-				$player.move_and_collide($player.position.direction_to(d3())*3)
-				if $player.position >= d3():
-					out()
-					get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+	if b2:
+		if irPraDica(d2()):
+			if ep == "Codó" or ep == "Alcântara":
+				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
+			else:
+				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+			
+	if b3:
+		if irPraDica(d3()):
+			if ep == "Codó" or ep == "Alcântara":
+				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
+			else:
+				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
 					
 					
 func write(txt):
@@ -266,20 +212,20 @@ func write(txt):
 func out():
 	#mostrar_dica()
 	desabilitar()
-	play.visible = false
+	$player.visible = false
 
 func d1():
 	$direcao/shape.position = posicao[ep][op]
 	
-	return posicao[ep][op]+Vector2(0,60)
+	return posicao[ep][op]+size_b[ep][op]/2
 
 func d2():
 	$direcao/shape.position = posicao[ep][op]
-	return posicao[ep][op]+Vector2(0,60)
+	return posicao[ep][op]+size_b[ep][op]/2
 
 func d3():
 	$direcao/shape.position = posicao[ep][op]
-	return posicao[ep][op]+Vector2(0,60)
+	return posicao[ep][op]+size_b[ep][op]/2
 
 func movimentacao():
 	move = true
