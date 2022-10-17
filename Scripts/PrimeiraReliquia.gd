@@ -15,9 +15,11 @@ func _ready():
 	if ep =="Alcântara":
 		texture = load(reliquias[1])
 		$voltar/Label.text = "Memu"
+		$Label.text = "Parabéns! \nVocê encontrou a última relíquia perdida."
 	if ep == "Codó":
 		texture = load(reliquias[0])
 		$voltar/Label.text = "Continuar"
+		$Label.text = "Parabés! \n Você encontrou a primeira relíquia."
 	pass
 
 func _on_voltar_pressed():

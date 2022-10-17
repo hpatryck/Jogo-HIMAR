@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Materiais/Videos/CAZUMBA Maranhão (Imagem de fundo de tela para celular) (1) (video-converter.com) (1).webm" type="VideoStream" id=1]
 [ext_resource path="res://Scripts/danca_cazumba.gd" type="Script" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=4]
 [ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=5]
 [ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=6]
+[ext_resource path="res://Materiais/fonts/vademecum.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 7 )
 
 [node name="VideoPlayer" type="VideoPlayer"]
 anchor_right = 1.0
@@ -37,6 +41,7 @@ margin_left = 5.0
 margin_top = 4.0
 margin_right = 118.0
 margin_bottom = 31.0
+custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
 

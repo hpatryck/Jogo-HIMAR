@@ -9,17 +9,17 @@ const path = {
 	"São Luis": ["Imperatriz", "Guimarães", "Carutapera"],
 	"Imperatriz": ["Viana", "Grajaú", "Buriticupu"],
 	"Grajaú": ["Santa Inês", "Pindaré", "Carolina"],
-	"Carutapera": ["São Luis", "Pindaré", "Buriticupu"],
+	"Carutapera": ["São Luis", "Guimarães", "Buriticupu"],
 	"Pindaré": ["Carolina", "Carutapera", "Codó"],
 	"Alcântara": ["Santa Inês", "Viana", "Codó"],
-	"Guimarães": ["Caxias", "Codó", "São Luis"],
-	"Buriticupu": ["Imperatriz", "Codó", "Grajaú"],
-	"Caxias": ["Barrerinhas", "Imperatriz", "Santa Inês"],
-	"Carolina": ["São Luis", "Grajaú", "Pindaré"],
+	"Guimarães": ["Caxias", "Buriticupu", "São Luis"],
+	"Buriticupu": ["Viana", "Caxias", "Grajaú"],
+	"Caxias": ["Carolina", "Imperatriz", "Santa Inês"],
+	"Carolina": ["São Luis", "Caxias", "Pindaré"],
 	"Barrerinhas": ["Alcântara", "Viana", "Caxias"],
 	"Codó": ["Guimarães", "Buriticupu", "Barrerinhas"],
 	"Santa Inês": ["Imperatriz", "Guimarães", "Carutapera"],
-	"Viana": ["São Luis", "Imperatriz", "Barrerinhas"],
+	"Viana": ["São Luis", "Imperatriz", "Caxias"],
 	
 }
 var current = ""

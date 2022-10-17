@@ -191,14 +191,14 @@ func _process(delta):
 				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
 	if b2:
 		if irPraDica(d2()):
-			if ep == "Codó" or ep == "Alcântara":
+			if ep  == "Alcântara":
 				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 			else:
 				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
 			
 	if b3:
 		if irPraDica(d3()):
-			if ep == "Codó" or ep == "Alcântara":
+			if ep  == "Alcântara":
 				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 			else:
 				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
