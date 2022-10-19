@@ -57,7 +57,7 @@ const telaf ={
 		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",#3-
 		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .jpg"#2
 	],
-	"Barrerinhas": [ 
+	"Barreirinhas": [ 
 	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/maria.jpg",#1
 	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/Maycon.jpg",#2
 	 "res://Materiais/Imagens/news imagens/personagens/barrerinhas/SeuChico.jpg"#2
@@ -118,26 +118,26 @@ const texto ={
 	"!!!"
 	],
 	"Guimarães": [
-	"sinto muito não poder lhe ajudar \n não avistei nada de estranho por aqui",
-	"não, não, \n estar tudo em paz por aqui!",
-	"não vi nada de estranho por aqui"
+	"Sinto muito não poder lhe ajudar \n não avistei nada de estranho por aqui",
+	"Não, não, \n estar tudo em paz por aqui!",
+	"Não vi nada de estranho por aqui"
 	],
 	"Buriticupu": [
 		"Suspeito? \n Não vi nenhum aqui não.",
-		"não tem nada de estranho por aqui",
+		"São tem nada de estranho por aqui",
 		"Não passou nenhum suspeito por aqui"
 	],
 	"Caxias": [
-		"não vi nada de estranho por aqui ",
-	"não posso lhe ajudar, não sei de nada"  ,
-	"desculpa, mas não vi nenhum suspeito por aqui"
+		"Não vi nada de estranho por aqui ",
+	"Não posso lhe ajudar, não sei de nada"  ,
+	"Desculpa, mas não vi nenhum suspeito por aqui"
 	],
 	"Carolina": [
 		"Não passou nenhum suspeito por aqui",
 		"Não avistei nenhum suspeito. ",
-		"por aqui não passou ninguém estranho"
+		"Por aqui não passou ninguém estranho"
 	],
-	"Barrerinhas": [ 
+	"Barreirinhas": [ 
 	"Um suspeito passou dizendo que ia participar do debate contra os higiênitas para não demolirem a cidade, não entendi nada.",
 	"Acho que sim, uma pessoa estranha disse que estava indo para uma cidade onde os edifícios estavam ficando arruinados e as pessoas estavam indo embora de lá.",
 	"Um suspeito disse que estava a caminho da cidade que foi a maior indústria do estado, mas que está decaindo aos poucos depois da abolição da escravatura."
@@ -148,14 +148,14 @@ const texto ={
 	"Meu fi, esses dias um rapaz me perguntou onde ficava um lugar que tinha acabado de se emancipar lá pro norte. Eu não soube respondê-lo, mas ele, convicto, disse que estava a caminho de lá"
 	],
 	"Santa Inês": [
-		"não, nenhum suspeito passou por aqui",
-		"oh querido/a, sinto muito \n mas não posso lhe ajudar,",
+		"Não, nenhum suspeito passou por aqui",
+		"Oh querido/a, sinto muito \n mas não posso lhe ajudar,",
 		"Suspeito? \n nããão siô, por aqui está tudo na santa paz."
 	],
 	"Viana": [
-		"não passou ninguém estranho",
-	"não vi ninguém suspeito por aqui"  ,
-	"não vi nada de estranho por aqui"
+		"Não passou ninguém estranho",
+	"Não vi ninguém suspeito por aqui"  ,
+	"Não vi nada de estranho por aqui"
 	],
 }
 
@@ -180,8 +180,6 @@ func _ready():
 	opc = file.get_as_text().split(":")[0]
 	eg =  file.get_as_text().split(";")[1]
 	dica()
-	
-	#print("op ="+ opc + "\n ep = "+ ep +"\n eg ="+eg)
 	
 	$tela_fundo/cazumbar.rect_position = Vector2(-300,-600)
 	$tela_fundo/cazumbar/Label.modulate = Color(0,0,0,1)

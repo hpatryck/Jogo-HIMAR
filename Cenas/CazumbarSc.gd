@@ -16,8 +16,8 @@ const path = {
 	"Buriticupu": ["Viana", "Caxias", "Grajaú"],
 	"Caxias": ["Carolina", "Imperatriz", "Santa Inês"],
 	"Carolina": ["São Luis", "Caxias", "Pindaré"],
-	"Barrerinhas": ["Alcântara", "Viana", "Caxias"],
-	"Codó": ["Guimarães", "Buriticupu", "Barrerinhas"],
+	"Barreirinhas": ["Alcântara", "Viana", "Caxias"],
+	"Codó": ["Guimarães", "Buriticupu", "Barreirinhas"],
 	"Santa Inês": ["Imperatriz", "Guimarães", "Carutapera"],
 	"Viana": ["São Luis", "Imperatriz", "Caxias"],
 	

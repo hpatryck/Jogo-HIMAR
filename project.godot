@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="-jogo-humar"
+config/name="HIMAR"
 run/main_scene="res://Cenas/menu.tscn"
 config/icon="res://icon.png"
 

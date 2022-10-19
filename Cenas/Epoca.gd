@@ -17,7 +17,7 @@ const mapa ={
 	"Buriticupu": [ "res://Materiais/Imagens/news imagens/mapa/buriticupuP.jpg" ],
 	"Caxias": ["res://Materiais/Imagens/news imagens/mapa/telaMapaCaxiasMa2.jpg"  ],
 	"Carolina": [ "res://Materiais/Imagens/news imagens/mapa/carolina (1).jpg"  ],
-	"Barrerinhas": ["res://Materiais/Imagens/news imagens/mapa/telaBarerinhas.jpg" ],
+	"Barreirinhas": ["res://Materiais/Imagens/news imagens/mapa/telaBarerinhas.jpg" ],
 	"Codó": [  "res://Materiais/Imagens/news imagens/mapa/codo1.jpg"  ],
 	"Santa Inês": [ "res://Materiais/Imagens/news imagens/mapa/santaines.jpg"   ],
 	"Viana": ["res://Materiais/Imagens/news imagens/mapa/Viana.jpg" ],
@@ -35,7 +35,7 @@ const posicao ={
 	"Buriticupu":[Vector2(220,300), Vector2(330,640),Vector2(180,880)],
 	"Caxias":[Vector2(360,410),Vector2(415,570),Vector2(50,570)],   #////////////#
 	"Carolina":[Vector2(40,365),Vector2(315,440),Vector2(190,785)],
-	"Barrerinhas": [Vector2(290,275), Vector2(450,500),Vector2(110,750)],
+	"Barreirinhas": [Vector2(290,275), Vector2(450,500),Vector2(110,750)],
 	"Codó":[Vector2(100,600), Vector2(330,460),Vector2(230,770)],
 	"Santa Inês":[Vector2(490,290), Vector2(380,600),Vector2(125,700)],
 	"Viana":[Vector2(40,550),Vector2(450,650),Vector2(320,770)],
@@ -52,7 +52,7 @@ const start = {
 	"Buriticupu":false,
 	"Caxias":Vector2(322, 700),
 	"Carolina":false,
-	"Barrerinhas": Vector2(508, 736),
+	"Barreirinhas": Vector2(508, 736),
 	"Codó":false,
 	"Santa Inês":false,
 	"Viana":Vector2(416, 728)
@@ -69,7 +69,7 @@ const size_b = {
 	"Buriticupu":[Vector2(150,110), Vector2(150,150),Vector2(150,140)],
 	"Caxias":[Vector2(210,120),Vector2(200,150),Vector2(190,150)], #//////////////#
 	"Carolina":[Vector2(180,120),Vector2(145,285),Vector2(150,150)],
-	"Barrerinhas": [Vector2(170,222), Vector2(190,210),Vector2(210,170)],
+	"Barreirinhas": [Vector2(170,222), Vector2(190,210),Vector2(210,170)],
 	"Codó":[Vector2(175,100), Vector2(115,200),Vector2(135,135)],
 	"Santa Inês":[Vector2(120,100), Vector2(110,130),Vector2(150,140)],
 	"Viana":[Vector2(190,110),Vector2(150,140),Vector2(135,135)],
@@ -86,7 +86,7 @@ const entrances = {
 	"Buriticupu":[Vector2(150,110), Vector2(150,150),Vector2(150,140)],
 	"Caxias":[Vector2(210,120),Vector2(200,150),Vector2(190,150)], #//////////////#
 	"Carolina":[Vector2(180,120),Vector2(145,285),Vector2(150,150)],
-	"Barrerinhas": [Vector2(170,222), Vector2(190,210),Vector2(210,170)],
+	"Barreirinhas": [Vector2(170,222), Vector2(190,210),Vector2(210,170)],
 	"Codó":[Vector2(175,100), Vector2(115,200),Vector2(135,135)],
 	"Santa Inês":[Vector2(120,100), Vector2(110,130),Vector2(150,140)],
 	"Viana":[Vector2(190,110),Vector2(150,140),Vector2(135,135)],
@@ -144,7 +144,7 @@ func _ready():
 	$Voltar.rect_size= Vector2(250,90)
 	$Voltar.rect_position= Vector2(450,10)
 	$Voltar/Label2.modulate = Color(0, 0, 0, 1)
-	$Voltar/Label2.text = "VOLTAR"
+	$Voltar/Label2.text = "SAIR"
 	
 	$Label3.rect_position= Vector2(100,120)
 	
@@ -263,6 +263,7 @@ func _on_Cazumbar_pressed():
 	get_tree().change_scene("res://Cenas/Cazumbar.tscn")
 
 func _on_Voltar_pressed():
+	get_tree().change_scene("res://Cenas/menu.tscn")
 	pass
 
 	

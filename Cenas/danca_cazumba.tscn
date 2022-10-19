@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Materiais/Videos/CAZUMBA Maranhão (Imagem de fundo de tela para celular) (1) (video-converter.com) (1).webm" type="VideoStream" id=1]
+[ext_resource path="res://Materiais/Videos/CAZUMBA Maranhao (Imagem de fundo de tela para celular) (1) (video-converter.com) (1).webm" type="VideoStream" id=1]
 [ext_resource path="res://Scripts/danca_cazumba.gd" type="Script" id=2]
 [ext_resource path="res://Materiais/Sons/musicaDaDancaCazumba.mp3" type="AudioStream" id=3]
-[ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=4]
-[ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=5]
-[ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=6]
+[ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=4]
+[ext_resource path="res://Materiais/Botoes/botao.png" type="Texture" id=5]
+[ext_resource path="res://Materiais/Botoes/BotaoClique.png" type="Texture" id=6]
 [ext_resource path="res://Materiais/fonts/vademecum.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]

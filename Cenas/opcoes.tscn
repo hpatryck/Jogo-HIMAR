@@ -1,12 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Materiais/fonts/IMPACT.TTF" type="DynamicFontData" id=1]
-[ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=2]
-[ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=3]
-[ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=4]
-[ext_resource path="res://Materiais/Imagens/news imagens/menu/começa.jpg" type="Texture" id=5]
+[ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=2]
+[ext_resource path="res://Materiais/Botoes/botao.png" type="Texture" id=3]
+[ext_resource path="res://Materiais/Botoes/BotaoClique.png" type="Texture" id=4]
+[ext_resource path="res://Materiais/Imagens/news imagens/menu/comeca.jpg" type="Texture" id=5]
 [ext_resource path="res://Materiais/Sons/MusicaMenuPrincipal.mp3" type="AudioStream" id=6]
 [ext_resource path="res://Scripts/opcoes.gd" type="Script" id=7]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 32

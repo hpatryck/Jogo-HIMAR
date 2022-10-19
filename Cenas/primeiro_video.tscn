@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Materiais/Videos/Introdução-Tempo-video.webm" type="VideoStream" id=1]
+[ext_resource path="res://Materiais/Videos/Introducao-Tempo-video.webm" type="VideoStream" id=1]
 [ext_resource path="res://VideoPlayer.gd" type="Script" id=2]
-[ext_resource path="res://Materiais/Botões/botãoAoClicar.png" type="Texture" id=3]
-[ext_resource path="res://Materiais/Botões/botão.png" type="Texture" id=4]
-[ext_resource path="res://Materiais/Botões/BotaoClique.png" type="Texture" id=5]
+[ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=3]
+[ext_resource path="res://Materiais/Botoes/botao.png" type="Texture" id=4]
+[ext_resource path="res://Materiais/Botoes/BotaoClique.png" type="Texture" id=5]
 [ext_resource path="res://Materiais/fonts/vademecum.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=1]
@@ -13,8 +13,8 @@ font_data = ExtResource( 6 )
 [node name="VideoPlayer" type="VideoPlayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 3.0
-margin_top = -1.0
+margin_left = -2.0
+margin_top = -3.0
 margin_right = 1.0
 margin_bottom = -3.0
 stream = ExtResource( 1 )
