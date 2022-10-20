@@ -7,20 +7,20 @@ onready var path2D = get_node("Path2D")
 onready var follow = get_node("Path2D/PathFollow2D")
 onready var play = get_node("Path2D/PathFollow2D/player")
 const mapa ={
-	"São Luis": ["res://Materiais/Imagens/news imagens/mapa/telaSaoLuis2.jpg" ],
-	"Imperatriz": ["res://Materiais/Imagens/news imagens/mapa/mapa_imperatriz.jpeg" ],
-	"Grajaú": ["res://Materiais/Imagens/news imagens/mapa/mapa_grajau.jpg"],
-	"Carutapera": [ "res://Materiais/Imagens/news imagens/mapa/13.Carutapera.jpg" ],
-	"Pindaré": ["res://Materiais/Imagens/news imagens/mapa/telaPindare2.jpg"  ],
-	"Alcântara": ["res://Materiais/Imagens/news imagens/mapa/telaAlcântarap.jpg"],
-	"Guimarães": ["res://Materiais/Imagens/news imagens/mapa/telaguimaraes.jpg"   ],
-	"Buriticupu": [ "res://Materiais/Imagens/news imagens/mapa/buriticupuP.jpg" ],
-	"Caxias": ["res://Materiais/Imagens/news imagens/mapa/telaMapaCaxiasMa2.jpg"  ],
-	"Carolina": [ "res://Materiais/Imagens/news imagens/mapa/carolina (1).jpg"  ],
-	"Barreirinhas": ["res://Materiais/Imagens/news imagens/mapa/telaBarerinhas.jpg" ],
-	"Codó": [  "res://Materiais/Imagens/news imagens/mapa/codo1.jpg"  ],
-	"Santa Inês": [ "res://Materiais/Imagens/news imagens/mapa/santaines.jpg"   ],
-	"Viana": ["res://Materiais/Imagens/news imagens/mapa/Viana.jpg" ],
+	"São Luis": ["res://Materiais/Imagens/news_imagens/mapa/telaSaoLuis2.jpg" ],
+	"Imperatriz": ["res://Materiais/Imagens/news_imagens/mapa/mapa_imperatriz.jpeg" ],
+	"Grajaú": ["res://Materiais/Imagens/news_imagens/mapa/mapa_grajau.jpg"],
+	"Carutapera": [ "res://Materiais/Imagens/news_imagens/mapa/Carutapera.jpg" ],
+	"Pindaré": ["res://Materiais/Imagens/news_imagens/mapa/telaPindare2.jpg"  ],
+	"Alcântara": ["res://Materiais/Imagens/news_imagens/mapa/telaAlcantarap.jpg"],
+	"Guimarães": ["res://Materiais/Imagens/news_imagens/mapa/telaguimaraes.jpg"   ],
+	"Buriticupu": [ "res://Materiais/Imagens/news_imagens/mapa/buriticupuP.jpg" ],
+	"Caxias": ["res://Materiais/Imagens/news_imagens/mapa/telaMapaCaxiasMa2.jpg"  ],
+	"Carolina": [ "res://Materiais/Imagens/news_imagens/mapa/carolina1.jpg"  ],
+	"Barreirinhas": ["res://Materiais/Imagens/news_imagens/mapa/telaBarerinhas.jpg" ],
+	"Codó": [  "res://Materiais/Imagens/news_imagens/mapa/codo1.jpg"  ],
+	"Santa Inês": [ "res://Materiais/Imagens/news_imagens/mapa/santaines.jpg"   ],
+	"Viana": ["res://Materiais/Imagens/news_imagens/mapa/Viana.jpg" ],
 	
 	}
 
@@ -100,16 +100,16 @@ const personagem = [
 
 
 const energia ={ 
-"0":["res://Materiais/Imagens/news imagens/tela_sino/sino1azul.jpg"],
-"1":["res://Materiais/Imagens/news imagens/tela_sino/sino2azul.jpg"], 
-"2":["res://Materiais/Imagens/news imagens/tela_sino/sino3azul.jpg"], 
-"3":["res://Materiais/Imagens/news imagens/tela_sino/sino4azul.jpg"], 
-"4":["res://Materiais/Imagens/news imagens/tela_sino/sino5azul.jpg"], 
-"5":["res://Materiais/Imagens/news imagens/tela_sino/sino6azul.jpg"], 
-"6":["res://Materiais/Imagens/news imagens/tela_sino/sino7azul.jpg"],
-"7":["res://Materiais/Imagens/news imagens/tela_sino/sino8azul.jpg"], 
-"8":["res://Materiais/Imagens/news imagens/tela_sino/sino9azul.jpg"],
-"9":["res://Materiais/Imagens/news imagens/tela_sino/sino10azul.jpg"]
+"0":["res://Materiais/Imagens/news_imagens/tela_sino/sino1azul.jpg"],
+"1":["res://Materiais/Imagens/news_imagens/tela_sino/sino2azul.jpg"], 
+"2":["res://Materiais/Imagens/news_imagens/tela_sino/sino3azul.jpg"], 
+"3":["res://Materiais/Imagens/news_imagens/tela_sino/sino4azul.jpg"], 
+"4":["res://Materiais/Imagens/news_imagens/tela_sino/sino5azul.jpg"], 
+"5":["res://Materiais/Imagens/news_imagens/tela_sino/sino6azul.jpg"], 
+"6":["res://Materiais/Imagens/news_imagens/tela_sino/sino7azul.jpg"],
+"7":["res://Materiais/Imagens/news_imagens/tela_sino/sino8azul.jpg"], 
+"8":["res://Materiais/Imagens/news_imagens/tela_sino/sino9azul.jpg"],
+"9":["res://Materiais/Imagens/news_imagens/tela_sino/sino10azul.jpg"]
 }
 
 
@@ -188,20 +188,20 @@ func _process(delta):
 			if ep == "Codó" or ep == "Alcântara":
 				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 			else:
-				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+				get_tree().change_scene("res://Cenas/grajau01.tscn" )
 	if b2:
 		if irPraDica(d2()):
 			if ep  == "Alcântara":
 				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 			else:
-				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+				get_tree().change_scene("res://Cenas/grajau01.tscn" )
 			
 	if b3:
 		if irPraDica(d3()):
 			if ep  == "Alcântara":
 				get_tree().change_scene("res://Cenas/PrimeiraReliquia.tscn" )
 			else:
-				get_tree().change_scene("res://Cenas/grajau0-1.tscn" )
+				get_tree().change_scene("res://Cenas/grajau01.tscn" )
 					
 					
 func write(txt):

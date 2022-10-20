@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Materiais/Imagens/news imagens/reliquia/reliquia1.jpeg" type="Texture" id=1]
+[ext_resource path="res://Materiais/Imagens/news_imagens/reliquia/reliquia1.jpeg" type="Texture" id=1]
 [ext_resource path="res://Scripts/PrimeiraReliquia.gd" type="Script" id=2]
 [ext_resource path="res://Materiais/fonts/BRITANIC.TTF" type="DynamicFontData" id=3]
 [ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=4]

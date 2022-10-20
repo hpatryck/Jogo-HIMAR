@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Materiais/Videos/Introducao-Tempo-video.webm" type="VideoStream" id=1]
+[ext_resource path="res://Materiais/Videos/Introducao_Tempo_video.webm" type="VideoStream" id=1]
 [ext_resource path="res://VideoPlayer.gd" type="Script" id=2]
 [ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=3]
 [ext_resource path="res://Materiais/Botoes/botao.png" type="Texture" id=4]

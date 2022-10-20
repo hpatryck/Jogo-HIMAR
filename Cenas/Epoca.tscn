@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://Materiais/Imagens/news imagens/mapa/telaguimaraes.jpg" type="Texture" id=1]
+[ext_resource path="res://Materiais/Imagens/news_imagens/mapa/telaguimaraes.jpg" type="Texture" id=1]
 [ext_resource path="res://Cenas/Epoca.gd" type="Script" id=2]
-[ext_resource path="res://Materiais/Imagens/news imagens/Seta.png" type="Texture" id=3]
+[ext_resource path="res://Materiais/Imagens/news_imagens/Seta.png" type="Texture" id=3]
 [ext_resource path="res://Cenas/direcao.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=6]
 [ext_resource path="res://Materiais/Botoes/BotaoClique.png" type="Texture" id=7]

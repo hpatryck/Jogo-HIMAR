@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Materiais/Imagens/news imagens/menu/comeca.jpg" type="Texture" id=1]
+[ext_resource path="res://Materiais/Imagens/news_imagens/menu/comeca.jpg" type="Texture" id=1]
 [ext_resource path="res://Cenas/CazumbarSc.gd" type="Script" id=2]
 [ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=3]
 [ext_resource path="res://Materiais/Botoes/BotaoClique.png" type="Texture" id=4]

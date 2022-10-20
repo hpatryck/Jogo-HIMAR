@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Materiais/fonts/vademecum.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Materiais/Imagens/news imagens/tela_sino/sino0azul.jpg" type="Texture" id=2]
+[ext_resource path="res://Materiais/Imagens/news_imagens/tela_sino/sino0azul.jpg" type="Texture" id=2]
 [ext_resource path="res://Materiais/fonts/BRITANIC.TTF" type="DynamicFontData" id=3]
 [ext_resource path="res://Scripts/game_over.gd" type="Script" id=4]
 [ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=5]

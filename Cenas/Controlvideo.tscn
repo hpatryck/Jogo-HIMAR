@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Materiais/Videos/WhatsApp Video 2022-03-22 at 11.32.25 (video-converter.com) (1).webm" type="VideoStream" id=1]
+[ext_resource path="res://Materiais/Videos/video_teste.webm" type="VideoStream" id=1]
 [ext_resource path="res://Cenas/Controlvideo.gd" type="Script" id=2]
+
 
 [node name="Control" type="Control"]
 anchor_right = 1.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Materiais/Videos/CAZUMBA Maranhao (Imagem de fundo de tela para celular) (1) (video-converter.com) (1).webm" type="VideoStream" id=1]
+[ext_resource path="res://Materiais/Videos/CAZUMBA_Maranhao_Imagem.webm" type="VideoStream" id=1]
 [ext_resource path="res://Scripts/danca_cazumba.gd" type="Script" id=2]
 [ext_resource path="res://Materiais/Sons/musicaDaDancaCazumba.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=4]

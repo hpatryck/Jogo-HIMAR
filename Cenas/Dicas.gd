@@ -5,80 +5,80 @@ onready var timer := $Timer as Timer
 #########################
 const telaf ={
 	"São Luis": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/Di.jpg",#2-
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,#4-
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"#3
+	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/Di.jpg",#2-
+	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,#4-
+	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/dica3_saoLuis.jpeg"#3
 	],
 	"Imperatriz": [
-		 "res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .jpg",#2-
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia.jpg",#2-
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/SeuJorge.jpeg"  #1obs
+		 "res://Materiais/Imagens/news_imagens/personagens/imperatriz/Claudinho.jpg",#2-
+		"res://Materiais/Imagens/news_imagens/personagens/imperatriz/Leia.jpg",#2-
+		"res://Materiais/Imagens/news_imagens/personagens/imperatriz/SeuJorge.jpeg"  #1obs
 		
 	],
 	"Grajaú": [
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica1_grajau.jpeg",#1
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",#2-
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"#2-
+		"res://Materiais/Imagens/news_imagens/personagens/grajau/dica1_grajau.jpeg",#1
+		"res://Materiais/Imagens/news_imagens/personagens/grajau/dica2_grajau.jpeg",#2-
+		"res://Materiais/Imagens/news_imagens/personagens/grajau/dica3_grajau.jpeg"#2-
 	],
 	"Carutapera": [
-	"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg",#2
-	"res://Materiais/Imagens/news imagens/personagens/codo/Luizinho.jpg",#1
-	"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg"#2-
+	"res://Materiais/Imagens/news_imagens/personagens/codo/Pedrinho.jpg",#2
+	"res://Materiais/Imagens/news_imagens/personagens/codo/Luizinho.jpg",#1
+	"res://Materiais/Imagens/news_imagens/personagens/codo/Gi.jpg"#2-
 	],
 	"Pindaré": [
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",#3-
-		"res://Materiais/Imagens/news imagens/personagens/pindare/2Pescador.jpg", #1
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Amanda.jpg"#1
+		"res://Materiais/Imagens/news_imagens/personagens/pindare/Zezinho.jpg",#3-
+		"res://Materiais/Imagens/news_imagens/personagens/pindare/Pescadori2.jpg", #1
+		"res://Materiais/Imagens/news_imagens/personagens/pindare/Amanda.jpg"#1
 		
 	],
 	"Alcântara": [ 
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica1_saoLuis.jpeg",#2
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,#4-
-	"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica3_saoLuis.jpeg"#3
+	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/dica1_saoLuis.jpeg",#2
+	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,#4-
+	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/dica3_saoLuis.jpeg"#3
 	],
 	"Guimarães": [
-		"res://Materiais/Imagens/news imagens/personagens/barrerinhas/SeuChico.jpg",#2-
-		"res://Materiais/Imagens/news imagens/personagens/saoLuis/dica2_saoLuis.jpeg" ,#4
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Pescador2.2.jpg"#1
+		"res://Materiais/Imagens/news_imagens/personagens/barrerinhas/SeuChico.jpg",#2-
+		"res://Materiais/Imagens/news_imagens/personagens/saoLuis/dica2_saoLuis.jpeg" ,#4
+		"res://Materiais/Imagens/news_imagens/personagens/pindare/Pescador22.jpg"#1
 	
 	],
 	"Buriticupu": [
-		"res://Materiais/Imagens/news imagens/personagens/alcantara/Ruan.jpg",#3-
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica2_grajau.jpeg",#2
-		"res://Materiais/Imagens/news imagens/personagens/grajau/dica3_grajau.jpeg"#2
+		"res://Materiais/Imagens/news_imagens/personagens/alcantara/Ruan.jpg",#3-
+		"res://Materiais/Imagens/news_imagens/personagens/grajau/dica2_grajau.jpeg",#2
+		"res://Materiais/Imagens/news_imagens/personagens/grajau/dica3_grajau.jpeg"#2
 	],
 	"Caxias": [
-		"res://Materiais/Imagens/news imagens/personagens/barrerinhas/Maycon.jpg",#2-
-		"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg",#2-
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Léia.jpg"#2
+		"res://Materiais/Imagens/news_imagens/personagens/barrerinhas/Maycon.jpg",#2-
+		"res://Materiais/Imagens/news_imagens/personagens/codo/Pedrinho.jpg",#2-
+		"res://Materiais/Imagens/news_imagens/personagens/imperatriz/Leia.jpg"#2
 	],
 	"Carolina": [
-		"res://Materiais/Imagens/news imagens/personagens/saoLuis/Di.jpg",#2
-		"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",#3-
-		"res://Materiais/Imagens/news imagens/personagens/imperatriz/Claudinho .jpg"#2
+		"res://Materiais/Imagens/news_imagens/personagens/saoLuis/Di.jpg",#2
+		"res://Materiais/Imagens/news_imagens/personagens/pindare/Zezinho.jpg",#3-
+		"res://Materiais/Imagens/news_imagens/personagens/imperatriz/Claudinho.jpg"#2
 	],
 	"Barreirinhas": [ 
-	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/maria.jpg",#1
-	"res://Materiais/Imagens/news imagens/personagens/barrerinhas/Maycon.jpg",#2
-	 "res://Materiais/Imagens/news imagens/personagens/barrerinhas/SeuChico.jpg"#2
+	"res://Materiais/Imagens/news_imagens/personagens/barrerinhas/maria.jpg",#1
+	"res://Materiais/Imagens/news_imagens/personagens/barrerinhas/Maycon.jpg",#2
+	 "res://Materiais/Imagens/news_imagens/personagens/barrerinhas/SeuChico.jpg"#2
 	
 	],
 	"Codó": [
-	"res://Materiais/Imagens/news imagens/personagens/codo/Pedrinho.jpg",#2
-	"res://Materiais/Imagens/news imagens/personagens/codo/Luizinho.jpg",#1
-	"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg"#2-
+	"res://Materiais/Imagens/news_imagens/personagens/codo/Pedrinho.jpg",#2
+	"res://Materiais/Imagens/news_imagens/personagens/codo/Luizinho.jpg",#1
+	"res://Materiais/Imagens/news_imagens/personagens/codo/Gi.jpg"#2-
 	
 	
 	],
 	"Santa Inês": [
-		"res://Materiais/Imagens/news imagens/personagens/barrerinhas/maria.jpg",#2
-		"res://Materiais/Imagens/news imagens/personagens/alcantara/João.jpg",#1
-		"res://Materiais/Imagens/news imagens/personagens/alcantara/Ruan.jpg",#3-
+		"res://Materiais/Imagens/news_imagens/personagens/barrerinhas/maria.jpg",#2
+		"res://Materiais/Imagens/news_imagens/personagens/alcantara/Joao.jpg",#1
+		"res://Materiais/Imagens/news_imagens/personagens/alcantara/Ruan.jpg",#3-
 	],
 	"Viana": [
-	"res://Materiais/Imagens/news imagens/personagens/alcantara/Ruan.jpg",#3
-	"res://Materiais/Imagens/news imagens/personagens/pindare/Zezinho.jpg",#3
-	"res://Materiais/Imagens/news imagens/personagens/codo/Gi.jpg"#2
+	"res://Materiais/Imagens/news_imagens/personagens/alcantara/Ruan.jpg",#3
+	"res://Materiais/Imagens/news_imagens/personagens/pindare/Zezinho.jpg",#3
+	"res://Materiais/Imagens/news_imagens/personagens/codo/Gi.jpg"#2
 	],
 	
 }

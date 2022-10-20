@@ -2,8 +2,8 @@ extends Sprite
 
 
 const reliquias = [
-		"res://Materiais/Imagens/news imagens/reliquia/reliquia1.jpeg",
-		"res://Materiais/Imagens/news imagens/reliquia/reliquia_1.jpeg"
+		"res://Materiais/Imagens/news_imagens/reliquia/reliquia1.jpeg",
+		"res://Materiais/Imagens/news_imagens/reliquia/reliquia_1.jpeg"
 ]
 var file = File.new()
 func _ready():
@@ -27,5 +27,5 @@ func _on_voltar_pressed():
 	if ep1 == "Alcântara":
 		get_tree().change_scene("res://Cenas/menu.tscn")
 	else:
-		get_tree().change_scene("res://Cenas/grajau0-1.tscn")
+		get_tree().change_scene("res://Cenas/grajau01.tscn")
 	pass # Replace with function body.
