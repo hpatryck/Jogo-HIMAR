@@ -32,7 +32,7 @@ func _ready():
 	var file = File.new()
 	file.open("res://player.txt", File.READ)
 	current = file.get_as_text().split(":")[1].split(";")[0]
-	print(current)
+	
 	var cor = Color(0, 0, 0, 1)
 	$estamos_em.modulate = cor
 	$estamos_em.text = "Estamos em "+ current +" \nVamos para "

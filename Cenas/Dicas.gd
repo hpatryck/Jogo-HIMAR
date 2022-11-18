@@ -2,7 +2,6 @@ extends Node2D
 
 onready var timer := $Timer as Timer
 
-#########################
 const telaf ={
 	"São Luis": [ 
 	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/Di.jpg",#2-
@@ -124,7 +123,7 @@ const texto ={
 	],
 	"Buriticupu": [
 		"Suspeito? \n Não vi nenhum aqui não.",
-		"São tem nada de estranho por aqui",
+		"Não tem nada de estranho por aqui",
 		"Não passou nenhum suspeito por aqui"
 	],
 	"Caxias": [
@@ -158,11 +157,6 @@ const texto ={
 	"Não vi nada de estranho por aqui"
 	],
 }
-
-
-
-
-
 
 var opc = ""
 var ep = ""
@@ -227,8 +221,7 @@ func _on_Timer_timeout():
 		soma = s1 + s2 + s3
 		$tela_fundo/Label.lines_skipped =6
 		$tela_fundo/Label.visible_characters = 0
-		print("entrou no 1° if")
-		print (soma)
+		
 		num= num+1
 	if  $tela_fundo/Label.visible_characters == 140 and num ==1:
 		s2 = $tela_fundo/Label.percent_visible
@@ -236,23 +229,21 @@ func _on_Timer_timeout():
 		
 		$tela_fundo/Label.lines_skipped =12
 		$tela_fundo/Label.visible_characters = 0
-		print("entrou no 2° if")
-		print (soma)
+		
 		num= num+1
 		
 	if $tela_fundo/Label.visible_characters == 140 and num ==2:
 		s3 = $tela_fundo/Label.percent_visible
 		$tela_fundo/Label.lines_skipped =18
 		$tela_fundo/Label.visible_characters = 0
-		print("entrou no 3° if")
+		
 		soma = s1 + s2 + s3
-		print (soma)
+		
 		num= num+1
 		
 	$tela_fundo/Label.visible_characters = $tela_fundo/Label.visible_characters+1
 	if soma >0.99:
 		timer.one_shot = true
-		print(soma)
-		print("fim")
+		
 		
 	pass # Replace with function body.

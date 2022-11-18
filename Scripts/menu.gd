@@ -1,16 +1,6 @@
 extends Sprite
 
 
-
-const tela_menu = ["res://Materiais/Imagens/imagem_menu/começa.jpg",
-	"res://Materiais/Imagens/imagem_menu/menu_ranking.jpeg",
-	"res://Materiais/Imagens/imagem_menu/menuPrincipalSemBotao.jpg" ]
-
-const botao = [ "res://Materiais/Botões/botão.png",
-	"res://Materiais/Botões/botãoAoClicar.png",
-	"res://Materiais/Botões/BotaoClique.png"
-]
-
 func _ready():
 	
 	var file = File.new()
@@ -19,7 +9,7 @@ func _ready():
 	var leve = info[1].split(";")
 	write(info[0] + ":" +"São Luis" + ";" + "9")
 	
-	$AudioStreamPlayer2D.play(1)
+	#$AudioStreamPlayer2D.play(1)
 	position= Vector2(180,320)
 	scale = Vector2(0.5,0.5)
 	$botao1.rect_position = Vector2(-140,-156)

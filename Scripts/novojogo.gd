@@ -5,7 +5,7 @@ var db
 var db_name = "res://SQLite/database.db"
 
 func _ready():
-	$AudioStreamPlayer2D.play(2)
+	#$AudioStreamPlayer2D.play(2)
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()
@@ -15,8 +15,8 @@ func _ready():
 	
 func _insertDB():
 	var name = $TextEdit.get_text().strip_edges()
-	if name == "":
-		return false
+	#if name == "":
+	#	return false
 	db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 	var player = db.query_result
 	if len(player) == 0:
