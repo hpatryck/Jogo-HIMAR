@@ -31,8 +31,8 @@ func _insertDB():
 	return true
 	
 func _on_TextureButton3_pressed():
-	if _insertDB():
-		get_tree().change_scene("res://Cenas/primeiro_video.tscn" )
+	#if _insertDB():
+	get_tree().change_scene("res://Cenas/primeiro_video.tscn" )
 	pass # Replace with function body.
 
 func _on_TextureButton2_pressed():

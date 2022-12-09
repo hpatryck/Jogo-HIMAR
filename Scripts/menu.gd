@@ -1,6 +1,5 @@
 extends Sprite
 
-
 func _ready():
 	
 	var file = File.new()
@@ -9,7 +8,7 @@ func _ready():
 	var leve = info[1].split(";")
 	write(info[0] + ":" +"São Luis" + ";" + "9")
 	
-	#$AudioStreamPlayer2D.play(1)
+	$AudioStreamPlayer2D.play(1)
 	position= Vector2(180,320)
 	scale = Vector2(0.5,0.5)
 	$botao1.rect_position = Vector2(-140,-156)

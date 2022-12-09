@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Materiais/Imagens/news_imagens/dica1_grajau.jpeg" type="Texture" id=1]
 [ext_resource path="res://Materiais/Botoes/BotaoClique.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Materiais/Botoes/botaoAoClicar.png" type="Texture" id=5]
 [ext_resource path="res://Materiais/fonts/BRITANIC.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://Materiais/fonts/COURGETTE-REGULAR.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://Materiais/Sons/MusicaDuranteAsTelas.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -81,6 +82,9 @@ autowrap = true
 clip_text = true
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="pressed" from="tela_fundo/cazumbar" to="." method="_on_cazumbar_pressed"]
 [connection signal="pressed" from="tela_fundo/voltar" to="." method="_on_voltar_pressed"]

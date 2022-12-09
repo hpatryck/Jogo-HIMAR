@@ -163,6 +163,7 @@ var ep = ""
 var eg = ""
 
 func _ready():
+	$AudioStreamPlayer.play()
 	timer.start()
 	
 	$tela_fundo/Label.visible_characters = 0
