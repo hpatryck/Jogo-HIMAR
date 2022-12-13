@@ -3,9 +3,9 @@ extends Sprite
 var file = File.new()
 
 
-onready var path2D = get_node("Path2D")
-onready var follow = get_node("Path2D/PathFollow2D")
-onready var play = get_node("Path2D/PathFollow2D/player")
+#onready var path2D = get_node("Path2D")
+#onready var follow = get_node("Path2D/PathFollow2D")
+#onready var play = get_node("Path2D/PathFollow2D/player")
 const mapa ={
 	"São Luis": ["res://Materiais/Imagens/news_imagens/mapa/telaSaoLuis2.jpg" ],
 	"Imperatriz": ["res://Materiais/Imagens/news_imagens/mapa/mapa_imperatriz.jpeg" ],
