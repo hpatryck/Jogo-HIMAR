@@ -2,11 +2,11 @@ extends Sprite
 
 var file = File.new()
 
-
+#onready
 #onready var path2D = get_node("Path2D")
 #onready var follow = get_node("Path2D/PathFollow2D")
 #onready var play = get_node("Path2D/PathFollow2D/player")
-const mapa ={
+onready var mapa ={
 	"São Luis": ["res://Materiais/Imagens/news_imagens/mapa/telaSaoLuis2.jpg" ],
 	"Imperatriz": ["res://Materiais/Imagens/news_imagens/mapa/mapa_imperatriz.jpeg" ],
 	"Grajaú": ["res://Materiais/Imagens/news_imagens/mapa/mapa_grajau.jpg"],
@@ -24,7 +24,7 @@ const mapa ={
 	
 	}
 
-const posicao ={
+onready var posicao ={
 	"São Luis": [Vector2(200,250), Vector2(240,555),Vector2(460,660)],
 	"Imperatriz":[Vector2(320,200), Vector2(110,440),Vector2(420,600)],
 	"Grajaú":[Vector2(175,320), Vector2(400,575),Vector2(30,780)],
@@ -41,7 +41,7 @@ const posicao ={
 	"Viana":[Vector2(40,550),Vector2(450,650),Vector2(320,770)],
 }
 
-const start = {
+onready var start = {
 	"São Luis": Vector2(324, 660),
 	"Imperatriz": Vector2(425, 470),
 	"Grajaú": false,
@@ -58,7 +58,7 @@ const start = {
 	"Viana":Vector2(416, 728)
 }
 
-const size_b = {
+onready var size_b = {
 	"São Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
 	"Imperatriz":[Vector2(250,240), Vector2(300,180),Vector2(230,200)],
 	"Grajaú":[Vector2(250,240), Vector2(400,600),Vector2(300,200)],
@@ -75,7 +75,7 @@ const size_b = {
 	"Viana":[Vector2(190,110),Vector2(150,140),Vector2(135,135)],
 }
 
-const entrances = {
+onready var entrances = {
 	"São Luis": [Vector2(370,200), Vector2(150,125),Vector2(230,200)],
 	"Imperatriz":[Vector2(250,240), Vector2(300,180),Vector2(230,200)],
 	"Grajaú":[Vector2(250,240), Vector2(400,600),Vector2(300,200)],

@@ -5,7 +5,7 @@ const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
 var db
 var db_name = "res://SQLite/database.db"
 
-const path = {
+onready var path = {
 	"São Luis": ["Imperatriz", "Guimarães", "Carutapera"],
 	"Imperatriz": ["Viana", "Grajaú", "Buriticupu"],
 	"Grajaú": ["Santa Inês", "Pindaré", "Carolina"],
@@ -25,9 +25,9 @@ const path = {
 var current = ""
 
 func _ready():
-	db = SQLite.new()
-	db.path = db_name
-	db.open_db()
+	#db = SQLite.new()
+	#db.path = db_name
+	#db.open_db()
 	$AudioStreamPlayer2D.play(2)
 	var file = File.new()
 	file.open("res://player.txt", File.READ)

@@ -2,7 +2,7 @@ extends Node2D
 
 onready var timer := $Timer as Timer
 
-const telaf ={
+onready var telaf ={
 	"São Luis": [ 
 	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/Di.jpg",#2-
 	"res://Materiais/Imagens/news_imagens/personagens/saoLuis/dica2_saoLuis.jpeg"  ,#4-
@@ -82,7 +82,7 @@ const telaf ={
 	
 }
 
-const texto ={
+onready var texto ={
 	"São Luis": [ 
 		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
 		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
